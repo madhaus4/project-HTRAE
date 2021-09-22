@@ -3,7 +3,7 @@ import logo from '../../logo.png';
 
 const NavBar = () => {
   return (
-    <header>
+    <nav>
       <div>
         <button>Home</button>
         <button>Carbon Dioxide</button>
@@ -15,7 +15,7 @@ const NavBar = () => {
         src={logo} 
         alt='project HTRAE logo: triangle with black text, black border, inside triangle is light blue, inside triangle is green, inside triangle is yellow, inside triangle is a deep pink' 
       />
-    </header>
+    </nav>
   )
 }
 
