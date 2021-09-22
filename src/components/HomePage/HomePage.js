@@ -3,7 +3,8 @@ import './HomePage.css';
 const HomePage = () => {
   return (
     <main>
-      <h2>not found here</h2>
+      <h2>Welcome to project HTRAE</h2>
+      <p>resource on global warming effects</p>
     </main>
   )
 }
