@@ -5,18 +5,30 @@ import HomePage from '../HomePage/HomePage';
 import {getData} from '../../utils/apiCalls';
 import './App.css';
 
-function App() {
+const App = () => {
+  const [errorMsg, setErrorMsg] = useState('')
   const [temperatureData, setTemperatureData] = useState([])
 
-  const pageLoad = () => {
-    getData()
-    .then(data => setTemperatureData(data.result))
-    .then(console.log('temperatureData: ', temperatureData))
-  }
+  // const pageLoad = () => {
+  //   getData('temperature')
+  //   .then(data => setTemperatureData(data))
+  //   .then(console.log('temperatureData: ', temperatureData))
+  //   .catch(error => console.log('error: ', error))
+  // }
 
   useEffect(() => {
-    pageLoad()
-  })
+    const fetchData = async () => {
+      try {
+        let data = await getData('temperature');
+        setTemperatureData(data.result)
+      } catch(error) {
+        setErrorMsg('this doesn\'t work')
+        console.log('errorMsg: ', errorMsg)
+      }
+    }
+    fetchData();
+    console.log('temperatureData: ', temperatureData)
+  }, []);
 
   return (
     <div>
@@ -25,5 +37,7 @@ function App() {
     </div>
   );
 }
+
+
 
 export default App;
