@@ -4,7 +4,7 @@ import logo from '../../logo.png';
 const NavBar = () => {
   return (
     <nav>
-      <div>
+      <div className='btn-container'>
         <button className='btn-in-nav'>Home</button>
         <button className='btn-in-nav'>Carbon Dioxide</button>
         <button className='btn-in-nav'>Temperature</button>
