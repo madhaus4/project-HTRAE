@@ -2,10 +2,10 @@ import './HomePage.css';
 
 const HomePage = () => {
   return (
-    <main>
+    <div>
       <h2>Welcome to project HTRAE</h2>
       <p>resource on global warming effects</p>
-    </main>
+    </div>
   )
 }
 
