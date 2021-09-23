@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
-import HomePage from '../HomePage/HomePage';
-import CO2Page from '../CO2Page/CO2Page';
-import TempPage from '../TempPage/TempPage';
-import PolarPage from '../PolarPage/PolarPage';
+// import HomePage from '../HomePage/HomePage';
+// import CO2Page from '../CO2Page/CO2Page';
+// import TempPage from '../TempPage/TempPage';
+// import PolarPage from '../PolarPage/PolarPage';
 
 import './NavBar.css';
 import logo from '../../logo.png';
@@ -18,7 +18,7 @@ const NavBar = () => {
         </button></Link>
       
         
-        <Link to='/CarbonDioxide'><button 
+        <Link to='/Carbon-Dioxide-Levels'><button 
           className='btn-in-nav'
           >Carbon Dioxide
         </button></Link>
@@ -30,7 +30,7 @@ const NavBar = () => {
         </button></Link>
       
         
-        <Link to='/ArcticIceMelt'><button 
+        <Link to='/Arctic-Ice-Melt'><button 
           className='btn-in-nav'
           >Polar Ice Melt
         </button></Link>
