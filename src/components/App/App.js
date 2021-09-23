@@ -6,6 +6,7 @@ import HomePage from '../HomePage/HomePage';
 import CO2Page from '../CO2Page/CO2Page';
 import TempPage from '../TempPage/TempPage';
 import PolarPage from '../PolarPage/PolarPage';
+import NotFound from '../NotFound/NotFound';
 import './App.css';
 
 const App = () => {
@@ -31,7 +32,7 @@ const App = () => {
           to='/ArcticIceMelt' 
           render={() => <PolarPage />} 
         />
-        {/* <Route render={() => <NotFound />} /> */}
+        <Route render={() => <NotFound />} />
        </Switch>
      </main>
     </>
