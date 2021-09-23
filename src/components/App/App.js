@@ -13,20 +13,16 @@ const App = () => {
      <NavBar />
      <main>
        <Switch>
-        <Route exact path 
-          to='/' 
+        <Route exact path='/' 
           render={() => <HomePage />} 
         />
-        <Route exact path 
-          to='/CarbonDioxideLevels' 
+        <Route exact path='/Carbon-Dioxide-Levels' 
           render={() => <CO2Page />} 
         />
-        <Route exact path 
-          to='/Temperature' 
+        <Route exact path='/Temperature' 
           render={() => <TempPage />} 
         />
-        <Route exact path 
-          to='/ArcticIceMelt' 
+        <Route exact path='/Arctic-Ice-Melt' 
           render={() => <PolarPage />} 
         />
         <Route render={() => <NotFound />} />
