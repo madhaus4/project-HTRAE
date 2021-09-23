@@ -1,13 +1,22 @@
 nav {
-  width: 100%;
+  width: 80%;
   height: 15vh;
+  margin: auto;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .btn-container {
   display: flex;
   align-items: flex-end;
+}
+
+.btn-in-nav {
+  background: transparent;
+  border: none;
+  color: #06762B;
+  font-size: 1em;
+  font-weight: 500;
 }
 
 .logo-in-nav {
