@@ -1,7 +1,8 @@
-// import HomePage from '../HomePage/HomePage';
-// import CO2Page from '../CO2Page/CO2Page';
-// import TempPage from '../TempPage/TempPage';
-// import PolarPage from '../PolarPage/PolarPage';
+import { Link } from 'react-router-dom';
+import HomePage from '../HomePage/HomePage';
+import CO2Page from '../CO2Page/CO2Page';
+import TempPage from '../TempPage/TempPage';
+import PolarPage from '../PolarPage/PolarPage';
 
 import './NavBar.css';
 import logo from '../../logo.png';
@@ -10,26 +11,30 @@ const NavBar = () => {
   return (
     <nav>
       <div className='btn-container'>
-        <button 
+        
+        <Link to='/'><button 
           className='btn-in-nav'
-          // onClick={() => <HomePage />}
           >Home
-        </button>
-        <button 
+        </button></Link>
+      
+        
+        <Link to='/CarbonDioxide'><button 
           className='btn-in-nav'
-          // onClick={() => <CO2Page />}
           >Carbon Dioxide
-        </button>
-        <button 
+        </button></Link>
+      
+        
+        <Link to='/Temperature'><button 
           className='btn-in-nav'
-          // onClick={() => <TempPage />}
           >Temperature
-        </button>
-        <button 
+        </button></Link>
+      
+        
+        <Link to='/ArcticIceMelt'><button 
           className='btn-in-nav'
-          // onClick={() => <PolarPage />}
           >Polar Ice Melt
-        </button>
+        </button></Link>
+      
       </div>
       <img 
         className='logo-in-nav'
