@@ -15,10 +15,22 @@ const App = () => {
      <NavBar />
      <main>
        <Switch>
-        <Route exact path to="/" render={() => <HomePage />} />
-        <Route exact path to="/CarbonDioxideLevels" render={() => <CO2Page />} />
-        <Route exact path to="/Temperatures" render={() => <TempPage />} />
-        <Route exact path to="/ArcticIceMelt" render={() => <PolarPage />} />
+        <Route exact path 
+          to='/' 
+          render={() => <HomePage />} 
+        />
+        <Route exact path 
+          to='/CarbonDioxideLevels' 
+          render={() => <CO2Page />} 
+        />
+        <Route exact path 
+          to='/Temperature' 
+          render={() => <TempPage />} 
+        />
+        <Route exact path 
+          to='/ArcticIceMelt' 
+          render={() => <PolarPage />} 
+        />
         {/* <Route render={() => <NotFound />} /> */}
        </Switch>
      </main>
