@@ -1,6 +1,4 @@
 import { Route, Switch } from 'react-router-dom';
-// import { useState, useEffect } from 'react';
-// import {getData} from '../../utils/apiCalls';
 import NavBar from '../NavBar/NavBar';
 import HomePage from '../HomePage/HomePage';
 import CO2Page from '../CO2Page/CO2Page';
@@ -10,7 +8,6 @@ import NotFound from '../NotFound/NotFound';
 import './App.css';
 
 const App = () => {
-
   return (
     <>
      <NavBar />
