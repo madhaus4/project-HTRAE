@@ -21,20 +21,6 @@ const TempPage = () => {
     retrieveData();
   }, []);
 
-  // const filterData = () => {
-  //   const temperatures = temperatureData.map(temp => {
-  //     return (
-  //       <TempGraph 
-  //         date={temp.time}
-  //         station={temp.station}
-  //         land={temp.land}
-  //       />
-  //     )
-  //   })
-  //   console.log('temperatures: ', temperatures)
-  //   return <div>{temperatures}</div>
-  // }
-
   return (
     <div>
       <p>temperature page</p>
