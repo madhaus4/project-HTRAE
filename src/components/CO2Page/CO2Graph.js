@@ -15,7 +15,11 @@ const CO2Graph = ({ CO2Data }) => {
       <AreaSeries
         className="area-series-example"
         curve="curveNatural"
-        data={[{x: 1, y: 10}, {x: 2, y: 5}, {x: 3, y: 15}]}
+        data={CO2Data.map(elem => ({
+          ...elem,
+          x: elem.year,
+          y: elem.cycle
+        }))}
       />
     </XYPlot>
   )
