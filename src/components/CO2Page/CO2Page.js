@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import {getData} from '../../utils/apiCalls';
+import CO2Graph from './CO2Graph';
 import './CO2Page.css';
 
 const CO2Page = () => {
@@ -20,7 +21,10 @@ const CO2Page = () => {
   }, []);
 
   return (
-    <p>CO2 page</p>
+    <>
+      <p>CO2 page</p>
+      <div><CO2Graph CO2Data={CO2Data}/></div>
+    </>
   )
 }
 
