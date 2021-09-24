@@ -21,14 +21,13 @@ const CO2Page = () => {
   }, []);
 
   return (
-    <div>
+    <section className='CO2-page-container' >
       {console.log('CO2Data: ', CO2Data)}
       <p>CO2 page</p>
-      <p>there is going to be a graph</p>
-      <article className='CO2Graph'>
-      <CO2Graph CO2Data={CO2Data} />
-      </article>
-    </div>
+      <div className='CO2-data-graph'>
+        <CO2Graph CO2Data={CO2Data} />
+      </div>
+    </section>
   )
 }
 

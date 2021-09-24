@@ -1,11 +1,11 @@
-.CO2Page-container {
+.CO2-page-container {
   height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: stretch;
 }
 
-.CO2Graph {
+.CO2-data-graph {
   margin: auto;
 }
