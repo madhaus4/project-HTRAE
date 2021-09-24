@@ -14,6 +14,7 @@ const CO2Graph = ({ CO2Data }) => {
       <YAxis />
       <AreaSeries
         className="area-series-example"
+        color="#06762B"
         curve="curveNatural"
         data={CO2Data.map(elem => ({
           ...elem,
