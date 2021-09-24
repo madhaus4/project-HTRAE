@@ -6,43 +6,37 @@ import './PolarPage.css';
 const PolarGraph = ({ polarData }) => {
 
   
-  const margin = {
-    top: 10,
-    bottom: 10,
-    left: 10,
-    right: 10
-  };
+  // const margin = {
+  //   top: 10,
+  //   bottom: 10,
+  //   left: 10,
+  //   right: 10
+  // };
   
-  const WIDTH = 300;
-  const HEIGHT = 300;
+  // const WIDTH = 300;
+  // const HEIGHT = 300;
 
 
 
   return (  
     <XYPlot
     width={600}
-    height={300}>
-    <HorizontalGridLines />
-    <VerticalGridLines />
-    <LineSeries
-      color="#B8466F"
-      data={polarData.map(elem => ({
-        ...elem,
-        x: elem.year,
-        y: elem.extent
-      }))}
-    />
+    height={300}
+    yDomain={[3, 8]}
+    >
+      <HorizontalGridLines />
+      <VerticalGridLines />
         <LineSeries
-      color="#06762B"
-      data={polarData.map(elem => ({
-        ...elem,
-        // x: elem.year,
-        y: elem.trend
-      }))}
-    />
-    <XAxis title='YEAR' />
-    <YAxis title='EXTENT' />
-  </XYPlot>
+        color="#B8466F"
+        data={polarData.map(elem => ({
+          ...elem,
+          x: elem.year,
+          y: elem.extent
+        }))}
+        />
+      <XAxis title='YEAR' />
+      <YAxis title='Million sq. km' />
+    </XYPlot>
   )
 };
 
