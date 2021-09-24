@@ -25,12 +25,16 @@ const TempGraph = ({ temperatureData }) => {
   // console.log('tempGraph: ', tempGraph)
 
 // accessors
-const date = (temperatureData) => new Date(temperatureData.time).valueOf();
+const date = () => new Date(temperatureData.time).valueOf();
 console.log('date: ', date)
-const ny = (temperatureData) => Number(temperatureData.station);
+const ny = () => Number(temperatureData.station);
 console.log('ny: ', ny)
-const sf = (temperatureData) => Number(temperatureData.land);
+const sf = () => Number(temperatureData.land);
 console.log('sf: ', sf)
+
+// const date = () => new Date(d.date).valueOf();
+// const ny = () => Number(d['New York']);
+// const sf = (d: CityTemperature) => Number(d['San Francisco']);
 
 // const tempDate = temperatureData.time
 // const tempStation = temperatureData.station
@@ -45,8 +49,10 @@ const timeScale = scaleTime({
 });
 const temperatureScale = scaleLinear({
   domain: [
-    Math.min(...temperatureData.map(d => Math.min(ny(d), sf(d)))),
-    Math.max(...temperatureData.map(d => Math.max(ny(d), sf(d)))),
+    Math.min(...temperatureData.map(elem => Math.min(elem.station, elem.land))),
+    Math.max(...temperatureData.map(elem => Math.max(elem.station, elem.land))),
+    // Math.min(...temperatureData.map(d => Math.min(ny(d), sf(d)))),
+    // Math.max(...temperatureData.map(d => Math.max(ny(d), sf(d)))),
   ],
   nice: true,
 });
@@ -144,9 +150,9 @@ const margin = {
           </text>
 
           {/* <Threshold
-          // <CityTemperature>
+          
             id={`${Math.random()}`}
-            data={cityTemperature}
+            data={temperatureData}
             x={d => timeScale(date(d)) ?? 0}
             y0={d => temperatureScale(ny(d)) ?? 0}
             y1={d => temperatureScale(sf(d)) ?? 0}
@@ -166,8 +172,8 @@ const margin = {
           <LinePath
             data={temperatureData}
             curve={curveBasis}
-            x={d => timeScale(date(d)) ?? 0}
-            y={d => temperatureScale(sf(d)) ?? 0}
+            x={temperatureData.map(elem => elem.time ?? 0)}
+            y={temperatureData.map(elem => elem.station ?? 0)}
             stroke="#222"
             strokeWidth={1.5}
             strokeOpacity={0.8}
@@ -177,8 +183,8 @@ const margin = {
           <LinePath
             data={temperatureData}
             curve={curveBasis}
-            x={d => timeScale(date(d)) ?? 0}
-            y={d => temperatureScale(ny(d)) ?? 0}
+            x={temperatureData.map(elem => elem.time ?? 0)}
+            y={temperatureData.map(elem => elem.land ?? 0)}
             stroke="#222"
             strokeWidth={1.5}
           />
@@ -188,8 +194,6 @@ const margin = {
     </div>
   );
 }
-
-
 
 
 
