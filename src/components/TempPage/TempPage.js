@@ -21,11 +21,13 @@ const TempPage = () => {
   }, []);
 
   return (
-    <div>
+    <section className='temp-page-container'>
       {console.log('temperatureData: ', temperatureData)}
       <p>temperature page</p>
-      <TempGraph temperatureData={temperatureData} />
-    </div>
+      <div className='temp-data-graph'>
+        <TempGraph temperatureData={temperatureData} />
+      </div>
+    </section>
   )
 }
 
