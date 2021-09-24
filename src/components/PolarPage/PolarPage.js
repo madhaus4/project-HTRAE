@@ -22,10 +22,11 @@ const PolarPage = () => {
 
 
   return (
-    <>
+    <div>
+      {console.log('polarData: ', polarData)}
       <p>polar page</p>
-      <div><PolarGraph polarData={polarData} /></div>
-    </>
+      <PolarGraph polarData={polarData} />
+    </div>
   )
 }
 

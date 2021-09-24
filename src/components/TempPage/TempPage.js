@@ -14,7 +14,6 @@ const TempPage = () => {
     } catch(error) {
       setErrorMsg('ERROR MSG: ', errorMsg)
     }
-    console.log('temperatureData: ', temperatureData)
   }
 
   useEffect(() => {
@@ -23,6 +22,7 @@ const TempPage = () => {
 
   return (
     <div>
+      {console.log('temperatureData: ', temperatureData)}
       <p>temperature page</p>
       <TempGraph temperatureData={temperatureData} />
     </div>
