@@ -1,27 +1,22 @@
-import {XYPlot, XAxis, YAxis, HorizontalGridLines, LineSeries} from 'react-vis';
+import {XYPlot, XAxis, YAxis, HorizontalGridLines, VerticalGridLines, AreaSeries} from 'react-vis';
 import '../../../node_modules/react-vis/dist/style.css';
 import './CO2Page.css';
 
 
 
 const CO2Graph = ({ CO2Data }) => {
-  // let mappedData = CO2Data.map(elem => {
 
   return (
-    <XYPlot
-      width={600}
-      height={300}>
+    <XYPlot width={600} height={300}>
+      <VerticalGridLines />
       <HorizontalGridLines />
-      <LineSeries
-        color="#B8466F"
-        data={ [
-          {x: 1, y: 8},
-          {x: 2, y: 10},
-          {x: 3, y: 15}
-        ]}
+      <XAxis />
+      <YAxis />
+      <AreaSeries
+        className="area-series-example"
+        curve="curveNatural"
+        data={[{x: 1, y: 10}, {x: 2, y: 5}, {x: 3, y: 15}]}
       />
-      <XAxis title='X' />
-      <YAxis title='Y' />
     </XYPlot>
   )
 };
