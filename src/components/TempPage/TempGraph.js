@@ -2,7 +2,7 @@ import {XYPlot, XAxis, YAxis, HorizontalGridLines, LineSeries} from 'react-vis';
 import '../../../node_modules/react-vis/dist/style.css';
 import './TempPage.css';
 
-const TempGraph = () => {
+const TempGraph = ({ temperatureData }) => {
   return (
     <XYPlot
       width={600}
