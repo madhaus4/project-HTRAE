@@ -10,11 +10,11 @@ const TempGraph = ({ temperatureData }) => {
       <HorizontalGridLines />
       <LineSeries
         color="#B8466F"
-        data={ [
-          {x: 1, y: 8},
-          {x: 2, y: 10},
-          {x: 3, y: 15}
-        ]}
+        data={temperatureData.map(elem => ({
+          ...elem,
+          x: elem.time,
+          y: elem.land
+        }))}
       />
       <XAxis title='X' />
       <YAxis title='Y' />
@@ -24,3 +24,5 @@ const TempGraph = ({ temperatureData }) => {
 
 
 export default TempGraph;
+
+
