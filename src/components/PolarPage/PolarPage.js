@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import {getData} from '../../utils/apiCalls';
+import PolarGraph from './PolarGraph';
 import './PolarPage.css';
 
 const PolarPage = () => {
@@ -21,7 +22,10 @@ const PolarPage = () => {
 
 
   return (
-    <p>polar page</p>
+    <>
+      <p>polar page</p>
+      <div><PolarGraph polarData={polarData} /></div>
+    </>
   )
 }
 
