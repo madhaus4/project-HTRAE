@@ -22,11 +22,13 @@ const PolarPage = () => {
 
 
   return (
-    <div>
+    <section className='polar-page-container'>
       {console.log('polarData: ', polarData)}
       <p>polar page</p>
-      <PolarGraph polarData={polarData} />
-    </div>
+      <div className='polar-data-graph'>
+        <PolarGraph polarData={polarData} />
+      </div>
+    </section>
   )
 }
 
