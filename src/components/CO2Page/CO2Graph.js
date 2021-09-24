@@ -1,4 +1,4 @@
-import {XYPlot, XAxis, YAxis, HorizontalGridLines, VerticalGridLines, AreaSeries} from 'react-vis';
+import {XYPlot, XAxis, YAxis, HorizontalGridLines, VerticalGridLines, LineSeries} from 'react-vis';
 import '../../../node_modules/react-vis/dist/style.css';
 import './CO2Page.css';
 
@@ -7,21 +7,23 @@ import './CO2Page.css';
 const CO2Graph = ({ CO2Data }) => {
 
   return (
-    <XYPlot width={600} height={300}>
-      <VerticalGridLines />
+    <XYPlot
+    width={600}
+    height={300}
+    yDomain={[385, 420]}
+    >
       <HorizontalGridLines />
-      <XAxis />
-      <YAxis />
-      <AreaSeries
-        className="area-series-example"
-        color="#06762B"
-        curve="curveNatural"
+      <VerticalGridLines />
+      <LineSeries
+        color="#B8466F"
         data={CO2Data.map(elem => ({
           ...elem,
           x: elem.year,
-          y: elem.cycle
+          y: elem.trend
         }))}
       />
+      <XAxis title='YEAR' />
+      <YAxis title='Part per million' />
     </XYPlot>
   )
 };
@@ -46,3 +48,19 @@ export default CO2Graph;
 
 
 
+{/* <XYPlot width={600} height={300}>
+      <VerticalGridLines />
+      <HorizontalGridLines />
+      <XAxis title='YEAR' />
+      <YAxis title='CYCLE' />
+      <AreaSeries
+        // className="area-series-example"
+        color="#06762bb0"
+        curve="curveNatural"
+        data={CO2Data.map(elem => ({
+          ...elem,
+          x: elem.year,
+          y: elem.cycle
+        }))}
+      />
+    </XYPlot> */}
