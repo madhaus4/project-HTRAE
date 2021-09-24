@@ -9,7 +9,7 @@ const CO2Page = () => {
 
   const retrieveData = async () => {
     try {
-      let data = await getData('')
+      let data = await getData('co2')
       setCO2Data(data.co2)
     } catch(error) {
       setErrorMsg('ERROR MSG: ', errorMsg)
@@ -21,10 +21,11 @@ const CO2Page = () => {
   }, []);
 
   return (
-    <>
+    <div>
+      {console.log('CO2Data: ', CO2Data)}
       <p>CO2 page</p>
-      <div><CO2Graph CO2Data={CO2Data}/></div>
-    </>
+      <CO2Graph CO2Data={CO2Data}/>
+    </div>
   )
 }
 
