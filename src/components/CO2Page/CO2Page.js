@@ -24,6 +24,7 @@ const CO2Page = () => {
     <div>
       {console.log('CO2Data: ', CO2Data)}
       <p>CO2 page</p>
+      <p>there is going to be a graph</p>
       <CO2Graph CO2Data={CO2Data}/>
     </div>
   )
