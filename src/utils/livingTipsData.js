@@ -176,7 +176,7 @@ const livingTips = [
     category: 'reduce, reuse, recycle'
   }, 
   {
-    tip: 'Store food and other products in containers rather than foil and plastic wrap.'
+    tip: 'Store food and other products in containers rather than foil and plastic wrap.',
     category: 'reduce, reuse, recycle' 
   }
 ];
