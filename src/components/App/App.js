@@ -4,6 +4,7 @@ import HomePage from '../HomePage/HomePage';
 import CO2Page from '../CO2Page/CO2Page';
 import TempPage from '../TempPage/TempPage';
 import PolarPage from '../PolarPage/PolarPage';
+import TipsPage from '../TipsPage/TipsPage';
 import NotFound from '../NotFound/NotFound';
 import './App.css';
 
@@ -24,6 +25,9 @@ const App = () => {
         />
         <Route exact path='/Arctic-Ice-Melt' 
           render={() => <PolarPage />} 
+        />
+        <Route exact path='/Living-Tips'
+          render={() => <TipsPage />}
         />
         <Route render={() => <NotFound />} />
        </Switch>

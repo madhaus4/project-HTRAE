@@ -1,9 +1,4 @@
 import { Link } from 'react-router-dom';
-// import HomePage from '../HomePage/HomePage';
-// import CO2Page from '../CO2Page/CO2Page';
-// import TempPage from '../TempPage/TempPage';
-// import PolarPage from '../PolarPage/PolarPage';
-
 import './NavBar.css';
 import logo from '../../logo.png';
 
@@ -33,6 +28,11 @@ const NavBar = () => {
         <Link to='/Arctic-Ice-Melt'><button 
           className='btn-in-nav'
           >Polar Ice Melt
+        </button></Link>
+
+        <Link to='/Living-Tips'><button 
+          className='btn-in-nav'
+          >Living Tips
         </button></Link>
       
       </div>
