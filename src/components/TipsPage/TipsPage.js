@@ -5,11 +5,13 @@ import './TipsPage.css';
 
 const TipsPage = () => {
   const [currentTip, setCurrentTip] = useState()
+  let randomTip;
 
   const getRandomTip = () => {
     let randomTipIndex = Math.floor(Math.random() * livingTips.length);
-    let randomTip = livingTips[randomTipIndex].tip;
-    setCurrentTip(randomTip)
+    randomTip = livingTips[randomTipIndex];
+    console.log('randomTip: ', randomTip)
+    setCurrentTip(randomTip.tip)
   }
 
   useEffect(() => {
@@ -21,9 +23,16 @@ const TipsPage = () => {
 
   return (
     <section>
+      {console.log('currentTip: ', currentTip)}
       <p>useful tip here</p>
-      {/* {console.log('currentTip: ', livingTips[currentTip])} */}
       <p>{currentTip}</p>
+      <button 
+        >Favorite Tip
+      </button>
+      <button 
+        onClick={() => getRandomTip()} 
+        >Another Tip
+      </button>
     </section>
   )
 }
