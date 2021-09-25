@@ -6,6 +6,10 @@ import './TipsPage.css';
 const TipsPage = () => {
   const [tipsData, setTipsData] = useState([])
 
+
+
+
+
   return (
     <section>
       <p>useful tip here</p>
