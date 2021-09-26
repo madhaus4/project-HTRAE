@@ -26,12 +26,12 @@
 
 .tip-btn:hover {
   cursor: pointer;
-
 }
 
-.tip-container {
+.tip-container{
   width: 65%;
-  height: 65%;
+  /* height: 65%; */
+  height: fit-content;
   border: 2px solid green;
   display: flex;
   flex-direction: column;
@@ -40,7 +40,7 @@
 
 .tip-container > h2 {
   padding: 5%;
-  margin: auto;
+  /* margin: auto; */
 }
 
 .saved-icon {
@@ -49,4 +49,22 @@
   padding-bottom: 1%;
   margin-right: 7%;
   align-self: flex-end;
+}
+
+
+.saved-tips-container {
+  height: fit-content;
+  padding: 1%;
+}
+
+article {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+.arrow-icon {
+  height: 15px;
+  width: 12px;
+  padding: 0 1% 0 .5%;
 }
