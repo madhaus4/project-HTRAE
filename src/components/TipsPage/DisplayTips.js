@@ -1,10 +1,10 @@
 import './TipsPage.css';
 
-const DisplayTips = () => {
+const DisplayTips = ({ favoriteTips }) => {
 
   return (
     <article>
-      
+
     </article>
   )
 }
