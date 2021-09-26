@@ -78,16 +78,19 @@ const TipsPage = () => {
 
         <div className='tips-btn-container'>
           {!isFavoritesDisplayed  && <button 
+            className='tip-btn'
             onClick={() => getRandomTip()} 
             >Another Tip
           </button>}
 
           {!isFavoritesDisplayed && <button 
+            className='tip-btn'
             onClick={() => updateFavorite(currentTip)}
             >Save Tip
           </button>}
 
           <button
+            className='tip-btn'
             onClick={() => toggleFavoritesDisplay()}
             >{!isFavoritesDisplayed ? 'View saved tips' : 'View more tips' }
           </button>
