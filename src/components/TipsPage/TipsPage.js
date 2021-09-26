@@ -21,6 +21,7 @@ const TipsPage = () => {
   }, []);
 
   const addFavoriteTip = (tip) => {
+    console.log('we in addFavroiteTip')
     const newFavorite = {
       tip: tip,
     }
@@ -28,16 +29,18 @@ const TipsPage = () => {
   }
 
   const removeFavoriteTip = (tip) => {
+    console.log('we in removeFavoriteTip')
     const filterFavoriteTips = favoriteTips.filter(favorite => favorite !== tip)
     setFavoriteTips(filterFavoriteTips)
   }
 
   const updateFavorite = (tip) => {
     console.log('tip: ', tip)
-    const foundTip = favoriteTips.find(favorite => favorite === tip)
+    console.log('favoriteTips: ', favoriteTips)
+    const foundTip = favoriteTips.find(favorite => favorite.tip === tip)
     console.log('foundTip: ', foundTip)
 
-    foundTip ? removeFavoriteTip(foundTip) : addFavoriteTip(tip)
+    !foundTip ? addFavoriteTip(tip) : removeFavoriteTip(foundTip)
   }
 
   const toggleFavoritesDisplay = () => {
@@ -49,7 +52,7 @@ const TipsPage = () => {
 
   return (
     <section>
-      {console.log('currentTip: ', currentTip)}
+      {/* {console.log('currentTip: ', currentTip)} */}
       <p>useful tip here</p>
       <p>{currentTip}</p>
       <button 
@@ -64,7 +67,7 @@ const TipsPage = () => {
         onClick={() => toggleFavoritesDisplay()}
         >View favorites 
       </button>
-      {console.log('favoriteTips: ', favoriteTips)}
+      {console.log('favoriteTips2!!!!!!!: ', favoriteTips)}
     </section>
   )
 }
