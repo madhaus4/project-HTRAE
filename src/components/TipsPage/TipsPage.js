@@ -6,6 +6,7 @@ import './TipsPage.css';
 const TipsPage = () => {
   const [currentTip, setCurrentTip] = useState()
   const [favoriteTips, setFavoriteTips] = useState([])
+  const [isFavoritesDisplayed, setIsFavoritesDisplayed] = useState(false)
   let randomTip;
 
   const getRandomTip = () => {
@@ -22,7 +23,6 @@ const TipsPage = () => {
   const addFavoriteTip = (tip) => {
     const newFavorite = {
       tip: tip,
-      // isLiked: true,
     }
       setFavoriteTips([...favoriteTips, newFavorite])
   }
@@ -40,7 +40,9 @@ const TipsPage = () => {
     foundTip ? removeFavoriteTip(foundTip) : addFavoriteTip(tip)
   }
 
-  const toggleDisplay = () => {}
+  const toggleFavoritesDisplay = () => {
+    setIsFavoritesDisplayed(!isFavoritesDisplayed)
+  }
 
 
 
@@ -59,7 +61,7 @@ const TipsPage = () => {
         >Favorite Tip
       </button>
       <button
-        onClick={() => toggleDisplay()}
+        onClick={() => toggleFavoritesDisplay()}
         >View favorites 
       </button>
       {console.log('favoriteTips: ', favoriteTips)}
