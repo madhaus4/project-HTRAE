@@ -11,13 +11,21 @@
 
 .tips-btn-container {
   width: 15%;
-  height: 50%;
+  /* height: 50%; */
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: stretch;
 }
 
+.tip-btn {
+  height: 6vh;
+  border: 1px solid black;
+  background: transparent;
+}
+
 .tip-container {
   width: 65%;
+  height: 65%;
+  border: 2px solid green;
 }
