@@ -23,6 +23,7 @@ const TipsPage = () => {
 
   const addFavoriteTip = (tip) => {
     console.log('we in addFavroiteTip')
+
     const newFavorite = {
       tip: tip,
     }
@@ -31,16 +32,13 @@ const TipsPage = () => {
 
   const removeFavoriteTip = (tip) => {
     console.log('we in removeFavoriteTip')
+
     const filterFavoriteTips = favoriteTips.filter(favorite => favorite !== tip)
     setFavoriteTips(filterFavoriteTips)
   }
 
   const updateFavorite = (tip) => {
-    // console.log('tip: ', tip)
-    // console.log('favoriteTips: ', favoriteTips)
     const foundTip = favoriteTips.find(favorite => favorite.tip === tip)
-    // console.log('foundTip: ', foundTip)
-
     !foundTip ? addFavoriteTip(tip) : removeFavoriteTip(foundTip)
   }
 
@@ -48,27 +46,36 @@ const TipsPage = () => {
     setIsFavoritesDisplayed(!isFavoritesDisplayed)
   }
 
+  // LOCAL STORAGE
+  const addToStorage = () => {
+    localStorage.addItem()
+  }
 
+  const getFromStorage = () => {
+    localStorage.getItem()
+  }
+
+  const removeFromStorage = () => {
+    localStorage.removeItem()
+  }
 
 
   return (
     <section>
       <p>useful tip here</p>
       {!isFavoritesDisplayed && <p>{currentTip}</p>}
-      {/* <div className='btn-container'> */}
-        <button 
-          onClick={() => getRandomTip()} 
-          >Another Tip
-        </button>
-        <button 
-          onClick={() => updateFavorite(currentTip)}
-          >Favorite Tip
-        </button>
-        <button
-          onClick={() => toggleFavoritesDisplay()}
-          >{!isFavoritesDisplayed ? 'View favorites' : 'View more tips' }
-        </button>
-      {/* </div> */}
+      <button 
+        onClick={() => getRandomTip()} 
+        >Another Tip
+      </button>
+      <button 
+        onClick={() => updateFavorite(currentTip)}
+        >Favorite Tip
+      </button>
+      <button
+        onClick={() => toggleFavoritesDisplay()}
+        >{!isFavoritesDisplayed ? 'View favorites' : 'View more tips' }
+      </button>
       {isFavoritesDisplayed && <DisplayTips favoriteTips={favoriteTips}/>}
     </section>
   )
