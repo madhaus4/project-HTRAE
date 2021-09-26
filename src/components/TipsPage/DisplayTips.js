@@ -5,8 +5,11 @@ const DisplayTips = ({ favoriteTips }) => {
   const getFavorites = favoriteTips.map(favorite => {
     return (
       <article>
-        <img className='arrow-icon' src={arrowFill} />
-        <p key={Date.now()}>{favorite.tip}</p>
+        <div className='saved-tips'>
+          <img className='arrow-icon' src={arrowFill} />
+          <p key={Date.now()}>{favorite.tip}</p>
+        </div>
+        <h4>X</h4>
       </article>
     )
   })
