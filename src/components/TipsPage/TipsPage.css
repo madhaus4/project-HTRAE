@@ -61,6 +61,20 @@ article {
   display: flex;
   flex-direction: row;
   align-items: baseline;
+  justify-content: space-between;
+}
+
+article > h4 {
+  width: 3%;
+  font-size: larger;
+  margin: 0;
+}
+
+.saved-tips {
+  width: 94%;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
 }
 
 .arrow-icon {
