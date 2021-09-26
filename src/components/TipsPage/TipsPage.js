@@ -8,37 +8,35 @@ import './TipsPage.css';
 
 
 const TipsPage = () => {
-  const [currentTip, setCurrentTip] = useState('')
+  const [currentTip, setCurrentTip] = useState({})
   const [favoriteTips, setFavoriteTips] = useState([])
   const [isFavoritesDisplayed, setIsFavoritesDisplayed] = useState(false)
   const [isSaved, setIsSaved] = useState(false)
-  // let randomTip = {}
 
   const getRandomTip = () => {
     setIsSaved(false)
     const randomTipIndex = Math.floor(Math.random() * livingTips.length);
     const randomTip = livingTips[randomTipIndex];
     console.log('randomTip: ', randomTip)
-    setCurrentTip(randomTip.tip)
+    setCurrentTip(randomTip)
   }
 
   useEffect(() => {
     getRandomTip()
-    // retrieveFromStorage()
+    retrieveFromStorage()
   }, []);
 
   const addFavoriteTip = (tip) => {
     console.log('we in addFavoriteTip')
 
-    const newFavorite = {
-      // id: `${tip}` + 1,
-      tip: tip,
-    }
+    // const newFavorite = {
+    //   tip: tip,
+    // }
 
     // console.log('randomTip2: ', randomTip)
     setIsSaved(true)
-    setFavoriteTips([...favoriteTips, newFavorite])
-    addToStorage(newFavorite)
+    setFavoriteTips([...favoriteTips, tip])
+    addToStorage(tip)
   }
 
   const removeFavoriteTip = (tip) => {
@@ -50,7 +48,7 @@ const TipsPage = () => {
   }
 
   const updateFavorite = (tip) => {
-    const foundTip = favoriteTips.find(favorite => favorite.tip === tip)
+    const foundTip = favoriteTips.find(favorite => favorite.tip === tip.tip)
     !foundTip ? addFavoriteTip(tip) : removeFavoriteTip(foundTip)
   }
 
@@ -60,7 +58,7 @@ const TipsPage = () => {
 
   // LOCAL STORAGE
   const addToStorage = (tip) => {
-    localStorage.setItem(tip, JSON.stringify(tip))
+    localStorage.setItem(tip.id, JSON.stringify(tip))
   }
 
   const retrieveFromStorage = () => {
@@ -71,7 +69,7 @@ const TipsPage = () => {
   }
 
   const removeFromStorage = (tip) => {
-    localStorage.removeItem(tip)
+    localStorage.removeItem(tip.id)
   }
 
 
@@ -106,13 +104,15 @@ const TipsPage = () => {
         <div className='tip-container'>
         {!isFavoritesDisplayed && 
           <>
-          <h2>{currentTip}</h2>
+          <h2>{currentTip.tip}</h2>
           {isSaved && <img className='saved-icon' src={savedIcon} />}
-          </>}
-        
+          </>
+        }
+
         {isFavoritesDisplayed && <DisplayTips favoriteTips={favoriteTips}/>}
         </div>
 
+        {console.log('currentTip: ', currentTip)}
       </section>
     </>
   )
