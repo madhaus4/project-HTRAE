@@ -5,29 +5,34 @@ import './TipsPage.css';
 
 
 const TipsPage = () => {
-  const [currentTip, setCurrentTip] = useState()
+  const [currentTip, setCurrentTip] = useState('')
   const [favoriteTips, setFavoriteTips] = useState([])
   const [isFavoritesDisplayed, setIsFavoritesDisplayed] = useState(false)
-  let randomTip;
+  // let randomTip = {}
 
   const getRandomTip = () => {
     const randomTipIndex = Math.floor(Math.random() * livingTips.length);
-    randomTip = livingTips[randomTipIndex];
-    // console.log('randomTip: ', randomTip)
+    const randomTip = livingTips[randomTipIndex];
+    console.log('randomTip: ', randomTip)
     setCurrentTip(randomTip.tip)
   }
 
   useEffect(() => {
     getRandomTip()
+    // retrieveFromStorage()
   }, []);
 
   const addFavoriteTip = (tip) => {
-    console.log('we in addFavroiteTip')
+    console.log('we in addFavoriteTip')
 
     const newFavorite = {
+      // id: `${tip}` + 1,
       tip: tip,
     }
-      setFavoriteTips([...favoriteTips, newFavorite])
+
+    // console.log('randomTip2: ', randomTip)
+    setFavoriteTips([...favoriteTips, newFavorite])
+    addToStorage(newFavorite)
   }
 
   const removeFavoriteTip = (tip) => {
@@ -35,6 +40,7 @@ const TipsPage = () => {
 
     const filterFavoriteTips = favoriteTips.filter(favorite => favorite !== tip)
     setFavoriteTips(filterFavoriteTips)
+    removeFromStorage(tip)
   }
 
   const updateFavorite = (tip) => {
@@ -47,36 +53,46 @@ const TipsPage = () => {
   }
 
   // LOCAL STORAGE
-  const addToStorage = () => {
-    localStorage.addItem()
+  const addToStorage = (tip) => {
+    localStorage.setItem(tip, JSON.stringify(tip))
   }
 
-  const getFromStorage = () => {
-    localStorage.getItem()
+  const retrieveFromStorage = () => {
+    const findStoredTips = Object.keys(localStorage).map(tip => {
+      return JSON.parse(localStorage.getItem(tip))
+    })
+    setFavoriteTips(findStoredTips)
   }
 
-  const removeFromStorage = () => {
-    localStorage.removeItem()
+  const removeFromStorage = (tip) => {
+    localStorage.removeItem(tip)
   }
 
 
   return (
     <section>
+      
       <p>useful tip here</p>
+
       {!isFavoritesDisplayed && <p>{currentTip}</p>}
-      <button 
+
+      {!isFavoritesDisplayed  && <button 
         onClick={() => getRandomTip()} 
         >Another Tip
-      </button>
-      <button 
+      </button>}
+
+      {!isFavoritesDisplayed && <button 
         onClick={() => updateFavorite(currentTip)}
         >Favorite Tip
-      </button>
+      </button>}
+
       <button
         onClick={() => toggleFavoritesDisplay()}
         >{!isFavoritesDisplayed ? 'View favorites' : 'View more tips' }
       </button>
+
       {isFavoritesDisplayed && <DisplayTips favoriteTips={favoriteTips}/>}
+
     </section>
   )
 }
