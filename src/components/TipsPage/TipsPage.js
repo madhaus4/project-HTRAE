@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import DisplayTips from "./DisplayTips";
 import livingTips from "../../utils/livingTipsData";
-import arrowEmpty from '../../arrow-empty.png';
-import arrowFill from '../../arrow-fill.png';
+// import arrowEmpty from '../../arrow-empty.png';
+// import arrowFill from '../../arrow-fill.png';
 import savedIcon from '../../Saved.png';
 import './TipsPage.css';
 
@@ -26,35 +26,34 @@ const TipsPage = () => {
     retrieveFromStorage()
   }, []);
 
+
+
+  // FAVORITING AND UNFAVORITING
+  const updateFavorite = (tip) => {
+    const foundTip = favoriteTips.find(favorite => favorite.tip === tip.tip)
+    !foundTip ? addFavoriteTip(tip) : removeFavoriteTip(foundTip)
+  }
+
   const addFavoriteTip = (tip) => {
-    console.log('we in addFavoriteTip')
-
-    // const newFavorite = {
-    //   tip: tip,
-    // }
-
-    // console.log('randomTip2: ', randomTip)
     setIsSaved(true)
     setFavoriteTips([...favoriteTips, tip])
     addToStorage(tip)
   }
 
   const removeFavoriteTip = (tip) => {
-    console.log('we in removeFavoriteTip')
-
     const filterFavoriteTips = favoriteTips.filter(favorite => favorite !== tip)
     setFavoriteTips(filterFavoriteTips)
     removeFromStorage(tip)
   }
 
-  const updateFavorite = (tip) => {
-    const foundTip = favoriteTips.find(favorite => favorite.tip === tip.tip)
-    !foundTip ? addFavoriteTip(tip) : removeFavoriteTip(foundTip)
-  }
 
+
+  // TOGGLE DISPLAY
   const toggleFavoritesDisplay = () => {
     setIsFavoritesDisplayed(!isFavoritesDisplayed)
   }
+
+
 
   // LOCAL STORAGE
   const addToStorage = (tip) => {
