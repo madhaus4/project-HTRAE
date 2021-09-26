@@ -54,8 +54,8 @@ const TipsPage = () => {
   return (
     <section>
       <p>useful tip here</p>
-      <p>{currentTip}</p>
-      <div className='btn-container'>
+      {!isFavoritesDisplayed && <p>{currentTip}</p>}
+      {/* <div className='btn-container'> */}
         <button 
           onClick={() => getRandomTip()} 
           >Another Tip
@@ -66,9 +66,10 @@ const TipsPage = () => {
         </button>
         <button
           onClick={() => toggleFavoritesDisplay()}
-          >View favorites 
+          >{!isFavoritesDisplayed ? 'View favorites' : 'View more tips' }
         </button>
-      </div>
+      {/* </div> */}
+      {isFavoritesDisplayed && <DisplayTips favoriteTips={favoriteTips}/>}
     </section>
   )
 }
