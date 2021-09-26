@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react";
 import DisplayTips from "./DisplayTips";
 import livingTips from "../../utils/livingTipsData";
+import arrowEmpty from '../../arrow-empty.png';
+import arrowFill from '../../arrow-fill.png';
+import savedIcon from '../../Saved.png';
 import './TipsPage.css';
 
 
@@ -8,9 +11,11 @@ const TipsPage = () => {
   const [currentTip, setCurrentTip] = useState('')
   const [favoriteTips, setFavoriteTips] = useState([])
   const [isFavoritesDisplayed, setIsFavoritesDisplayed] = useState(false)
+  const [isSaved, setIsSaved] = useState(false)
   // let randomTip = {}
 
   const getRandomTip = () => {
+    setIsSaved(false)
     const randomTipIndex = Math.floor(Math.random() * livingTips.length);
     const randomTip = livingTips[randomTipIndex];
     console.log('randomTip: ', randomTip)
@@ -31,6 +36,7 @@ const TipsPage = () => {
     }
 
     // console.log('randomTip2: ', randomTip)
+    setIsSaved(true)
     setFavoriteTips([...favoriteTips, newFavorite])
     addToStorage(newFavorite)
   }
@@ -77,7 +83,8 @@ const TipsPage = () => {
       <section className='tips-page-container'>
 
         <div className='tips-btn-container'>
-          {!isFavoritesDisplayed  && <button 
+          {!isFavoritesDisplayed  && 
+          <button 
             className='tip-btn'
             onClick={() => getRandomTip()} 
             >Another Tip
@@ -97,7 +104,11 @@ const TipsPage = () => {
         </div>  
         
         <div className='tip-container'>
-        {!isFavoritesDisplayed && <h2>{currentTip}</h2>}
+        {!isFavoritesDisplayed && 
+          <>
+          <h2>{currentTip}</h2>
+          {isSaved && <img className='saved-icon' src={savedIcon} />}
+          </>}
         
         {isFavoritesDisplayed && <DisplayTips favoriteTips={favoriteTips}/>}
         </div>
@@ -109,3 +120,4 @@ const TipsPage = () => {
 
 
 export default TipsPage;
+
