@@ -26,6 +26,8 @@
 
 .tip-btn:hover {
   cursor: pointer;
+  text-transform: uppercase;
+  background-color: #94C5D8;
 }
 
 .tip-container{
