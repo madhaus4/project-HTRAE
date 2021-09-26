@@ -70,30 +70,37 @@ const TipsPage = () => {
 
 
   return (
-    <section>
-      
-      <p>useful tip here</p>
+    <>
+      <div className='tips-page-intro'>
+        <p>Some tips for you to try out</p>
+      </div>  
+      <section className='tips-page-container'>
 
-      {!isFavoritesDisplayed && <p>{currentTip}</p>}
+        <div className='tips-btn-container'>
+          {!isFavoritesDisplayed  && <button 
+            onClick={() => getRandomTip()} 
+            >Another Tip
+          </button>}
 
-      {!isFavoritesDisplayed  && <button 
-        onClick={() => getRandomTip()} 
-        >Another Tip
-      </button>}
+          {!isFavoritesDisplayed && <button 
+            onClick={() => updateFavorite(currentTip)}
+            >Save Tip
+          </button>}
 
-      {!isFavoritesDisplayed && <button 
-        onClick={() => updateFavorite(currentTip)}
-        >Favorite Tip
-      </button>}
+          <button
+            onClick={() => toggleFavoritesDisplay()}
+            >{!isFavoritesDisplayed ? 'View saved tips' : 'View more tips' }
+          </button>
+        </div>  
+        
+        <div className='tip-container'>
+        {!isFavoritesDisplayed && <h2>{currentTip}</h2>}
+        
+        {isFavoritesDisplayed && <DisplayTips favoriteTips={favoriteTips}/>}
+        </div>
 
-      <button
-        onClick={() => toggleFavoritesDisplay()}
-        >{!isFavoritesDisplayed ? 'View favorites' : 'View more tips' }
-      </button>
-
-      {isFavoritesDisplayed && <DisplayTips favoriteTips={favoriteTips}/>}
-
-    </section>
+      </section>
+    </>
   )
 }
 
