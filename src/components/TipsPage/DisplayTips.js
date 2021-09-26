@@ -1,16 +1,20 @@
+import arrowFill from '../../arrow-fill.png';
 import './TipsPage.css';
 
 const DisplayTips = ({ favoriteTips }) => {
   const getFavorites = favoriteTips.map(favorite => {
     return (
-      <p key={Date.now()}>{favorite.tip}</p>
+      <article>
+        <img className='arrow-icon' src={arrowFill} />
+        <p key={Date.now()}>{favorite.tip}</p>
+      </article>
     )
   })
 
   return (
-    <article>
+    <section className='saved-tips-container'>
       {getFavorites}
-    </article>
+    </section>
   )
 }
 
