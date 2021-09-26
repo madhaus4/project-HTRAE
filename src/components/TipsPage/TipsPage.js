@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import DisplayTips from "./DisplayTips";
 import livingTips from "../../utils/livingTipsData";
 import './TipsPage.css';
 
@@ -35,10 +36,10 @@ const TipsPage = () => {
   }
 
   const updateFavorite = (tip) => {
-    console.log('tip: ', tip)
-    console.log('favoriteTips: ', favoriteTips)
+    // console.log('tip: ', tip)
+    // console.log('favoriteTips: ', favoriteTips)
     const foundTip = favoriteTips.find(favorite => favorite.tip === tip)
-    console.log('foundTip: ', foundTip)
+    // console.log('foundTip: ', foundTip)
 
     !foundTip ? addFavoriteTip(tip) : removeFavoriteTip(foundTip)
   }
@@ -52,22 +53,22 @@ const TipsPage = () => {
 
   return (
     <section>
-      {/* {console.log('currentTip: ', currentTip)} */}
       <p>useful tip here</p>
       <p>{currentTip}</p>
-      <button 
-        onClick={() => getRandomTip()} 
-        >Another Tip
-      </button>
-      <button 
-        onClick={() => updateFavorite(currentTip)}
-        >Favorite Tip
-      </button>
-      <button
-        onClick={() => toggleFavoritesDisplay()}
-        >View favorites 
-      </button>
-      {console.log('favoriteTips2!!!!!!!: ', favoriteTips)}
+      <div className='btn-container'>
+        <button 
+          onClick={() => getRandomTip()} 
+          >Another Tip
+        </button>
+        <button 
+          onClick={() => updateFavorite(currentTip)}
+          >Favorite Tip
+        </button>
+        <button
+          onClick={() => toggleFavoritesDisplay()}
+          >View favorites 
+        </button>
+      </div>
     </section>
   )
 }
