@@ -8,8 +8,8 @@ const CO2Graph = ({ CO2Data }) => {
 
   return (
     <XYPlot
-    width={600}
-    height={300}
+    width={700}
+    height={250}
     yDomain={[385, 420]}
     >
       <HorizontalGridLines />
