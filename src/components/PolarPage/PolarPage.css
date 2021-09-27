@@ -6,6 +6,10 @@
   align-items: stretch;
 }
 
+.polar-page-container > h2 {
+  font-size: 1em;
+}
+
 .polar-data-graph {
   margin: auto;
 }

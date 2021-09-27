@@ -6,6 +6,10 @@
   align-items: stretch;
 }
 
+.CO2-page-container > h2 {
+  font-size: 1em;
+}
+
 .CO2-data-graph {
   margin: auto;
 }
