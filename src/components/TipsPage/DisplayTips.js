@@ -8,7 +8,7 @@ const DisplayTips = ({ favoriteTips, updateFavorite }) => {
         <div className='saved-tips'>
           <img 
             onClick={() => updateFavorite(favorite)}
-            className='arrow-icon' 
+            className='bookmark-icon-smaller' 
             src={saved} 
           />
           <p key={favorite.id}>{favorite.tip}</p>
