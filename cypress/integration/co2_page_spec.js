@@ -16,7 +16,13 @@ describe('Home Page', () => {
   it('Should display a graph', () => {
     cy.get('.CO2-page-container')
       .get('.CO2-data-graph')
-      
   })
 
+  it('Should not display an image', () => {
+    cy.contains('img').should('not.exist')
+  })
+
+  it('Should not display a button', () => {
+    cy.contains('button').should('not.exist')
+  })
 })
