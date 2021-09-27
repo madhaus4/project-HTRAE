@@ -5,8 +5,8 @@ import './TempPage.css';
 const TempGraph = ({ temperatureData }) => {
   return (
     <XYPlot
-      width={600}
-      height={300}
+      width={800}
+      height={225}
       yDomain={[-1.0, 1.5]}
     >
       <HorizontalGridLines />
