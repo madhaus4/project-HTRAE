@@ -3,7 +3,7 @@ describe('Nav Bar', () => {
     cy.visit('http://localhost:3000')
   })
 
-  it('Should have a button for each page', () => {
+  it('Should have a button for the Home page', () => {
     cy.get('nav')
       .get('.btn-container')
       .contains('Home')
@@ -12,7 +12,7 @@ describe('Nav Bar', () => {
       .should('include', '/')
   })
 
-  it('Should have a button for each page', () => {
+  it('Should have a button for the CO2 page', () => {
     cy.get('nav')
       .get('.btn-container')
       .contains('CO2')
@@ -21,7 +21,7 @@ describe('Nav Bar', () => {
       .should('include', '/Carbon-Dioxide-Levels')
   })
 
-  it('Should have a button for each page', () => {
+  it('Should have a button for the Surface Temp page', () => {
     cy.get('nav')
       .get('.btn-container')
       .contains('Surface Temp')
@@ -30,7 +30,7 @@ describe('Nav Bar', () => {
       .should('include', '/Temperature')
   })
 
-  it('Should have a button for each page', () => {
+  it('Should have a button for the Glacial Melt page', () => {
     cy.get('nav')
       .get('.btn-container')
       .contains('Glacial Melt')
@@ -39,7 +39,7 @@ describe('Nav Bar', () => {
       .should('include', '/Arctic-Ice-Melt')
   })
 
-  it('Should have a button for each page', () => {
+  it('Should have a button for the Sustainable Tips page', () => {
     cy.get('nav')
       .get('.btn-container')
       .contains('Sustainable Tips')
@@ -48,7 +48,7 @@ describe('Nav Bar', () => {
       .should('include', '/Sustainable-Life-Tips')
   })
 
-  it('Should have a button for each page', () => {
+  it('Should have a button for the This Planet page', () => {
     cy.get('nav')
       .get('.btn-container')
       .contains('This Planet')
@@ -62,5 +62,4 @@ describe('Nav Bar', () => {
       .get('.logo-in-nav')
       .should('have.attr', 'alt')
   })
-
 })
