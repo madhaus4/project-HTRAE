@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
-import DisplayTips from "./DisplayTips";
-import livingTips from "../../utils/livingTipsData";
+import { useState, useEffect } from 'react';
+import DisplayTips from './DisplayTips';
+import livingTips from '../../utils/livingTipsData';
 // import arrowEmpty from '../../arrow-empty.png';
 // import arrowFill from '../../arrow-fill.png';
 import savedIcon from '../../Saved.png';
