@@ -10,7 +10,6 @@ const TipsPage = () => {
   const [currentTip, setCurrentTip] = useState({})
   const [favoriteTips, setFavoriteTips] = useState([])
   const [isFavoritesDisplayed, setIsFavoritesDisplayed] = useState(false)
-  // const [isSaved, setIsSaved] = useState(false)
 
   const getRandomTip = () => {
     const randomTipIndex = Math.floor(Math.random() * livingTips.length);
@@ -24,53 +23,43 @@ const TipsPage = () => {
   }, []);
 
 
-
   // FAVORITING AND UNFAVORITING
   const updateFavorite = (tip) => {
     const foundTip = favoriteTips.find(favorite => favorite.tip === tip.tip)
-    console.log('foundTipinUpdateFavs: '. foundTip)
-
-    // handleFavorite(tip)
     !foundTip ? addFavoriteTip(tip) : removeFavoriteTip(foundTip)
   }
 
-  const handleFavorite = (tip) => {
-    const findLivingTip = livingTips.find(favorite => favorite.id === tip.id)
-    console.log('findLivingTip: ', findLivingTip)
-    const findFavoriteTip = favoriteTips.find(favorite => favorite.id === tip.id)
-    console.log('findFavoriteTip: ', findFavoriteTip)
-
-    if (findLivingTip || findFavoriteTip) {
-      findLivingTip.isSaved = !findLivingTip.isSaved
-    }
-  }
-
   const addFavoriteTip = (tip) => {
-    let newFavorite = {
+    const newFavorite = {
       isSaved: true,
       ...tip
     }
     handleFavorite(newFavorite)
     setFavoriteTips([...favoriteTips, newFavorite])
     addToStorage(newFavorite)
-    console.log('newFavorite in addFavorite: ', newFavorite)
   }
 
   const removeFavoriteTip = (tip) => {
-    let filterFavoriteTips = favoriteTips.filter(favorite => favorite.tip !== tip.tip)
+    const filterFavoriteTips = favoriteTips.filter(favorite => favorite.tip !== tip.tip)
     handleFavorite(tip)
     removeFromStorage(tip)
     setFavoriteTips(filterFavoriteTips)
-    console.log('removeFavorite function: ', tip)
   }
 
+  const handleFavorite = (tip) => {
+    const findLivingTip = livingTips.find(favorite => favorite.id === tip.id)
+    const findFavoriteTip = favoriteTips.find(favorite => favorite.id === tip.id)
+
+    if (findLivingTip || findFavoriteTip) {
+      findLivingTip.isSaved = !findLivingTip.isSaved
+    }
+  }
 
 
   // TOGGLE DISPLAY
   const toggleFavoritesDisplay = () => {
     setIsFavoritesDisplayed(!isFavoritesDisplayed)
   }
-
 
 
   // LOCAL STORAGE
@@ -112,12 +101,10 @@ const TipsPage = () => {
             >{!isFavoritesDisplayed ? 'View saved tips' : 'View more tips' }
           </button>
         </div>  
-        
         <div className='tip-container'>
         {!isFavoritesDisplayed && 
           <div>
             <h2>{currentTip.tip}</h2>
-
             <img 
               className='saved-icon' 
               onClick={() => updateFavorite(currentTip)}
@@ -126,7 +113,6 @@ const TipsPage = () => {
             />
           </div>
         }
-
         {isFavoritesDisplayed && <DisplayTips favoriteTips={favoriteTips} updateFavorite={updateFavorite} />}
         </div>
       </section>
