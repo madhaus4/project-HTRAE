@@ -51,21 +51,15 @@
 
 /* SUGGESTED TIP CONTAINER */
 .tip-container {
-  width: 65%;
-  /* height: 65%; */
   height: fit-content;
+  width: 65%;
   border: 2px solid green;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: space-between; */
 }
 
 .tip-container > div {
   padding: 5%;
   display: flex;
   align-items: flex-start;
-  /* flex-direction: column;
-  justify-content: space-between; */
 }
 
 .tip-container > div > h2 {
@@ -76,8 +70,6 @@
   height: 50px;
   width: 50px;
   padding-right: 1%;
-  /* margin-right: 7%; */
-  /* align-self: flex-end; */
 }
 
 
@@ -108,11 +100,11 @@ article > h4 {
   width: 94%;
   display: flex;
   flex-direction: row;
-  align-items: baseline;
+  align-items: center;
 }
 
-.arrow-icon {
-  height: 15px;
-  width: 12px;
+.bookmark-icon-smaller {
+  height: 25px;
+  width: 25px;
   padding: 0 1% 0 .5%;
 }
