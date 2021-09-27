@@ -1,11 +1,12 @@
+/* WORDLY IMAGE PAGE */
 .worldly-container {
   height: 100%;
   margin: 1.25%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, 31%);
-  justify-items: center;
   grid-gap: 1.25%;
+  justify-items: center;
 }
 
 .worldly-image {
