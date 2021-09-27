@@ -27,7 +27,7 @@ const TempPage = () => {
       <div className='temp-data-graph'>
         <TempGraph temperatureData={temperatureData} />
       </div>
-      <p>This map visually explains the rate at which the global temperature has risen over the last century, plus.  As we focus on the last 50 years, this number has risen about 1C which is ~33F. </p>
+      <p>This graph visually explains the rate at which the global temperature has risen over the last century, plus.  As we focus on the last 50 years, this number has risen about 1C which is ~33F. </p>
       <p>Fun Fact: The 10 warmest years on record have all occurred since 2005, and 7 of the 10 have occurred just since 2014. </p>
     </section>
   )
