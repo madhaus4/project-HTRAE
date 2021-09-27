@@ -7,7 +7,7 @@ const TempGraph = ({ temperatureData }) => {
     <XYPlot
       width={600}
       height={300}
-      yDomain={[-1.5, 2]}
+      yDomain={[-1.0, 1.5]}
     >
       <HorizontalGridLines />
       <VerticalGridLines />
