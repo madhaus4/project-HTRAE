@@ -7,7 +7,16 @@
 }
 
 .polar-page-container > h2 {
+  width: 85%;
+  padding: 1%;
+  /* margin: auto; */
   font-size: 1em;
+  text-align: center;
+}
+
+.polar-page-container > p {
+  margin: 0;
+  padding: 0 1% 1%;
 }
 
 .polar-data-graph {
