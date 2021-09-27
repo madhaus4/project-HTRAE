@@ -57,6 +57,10 @@
   border: 2px solid #067606;
 }
 
+.tip-container > h3 {
+  padding: 5%;
+}
+
 .tip-container > div {
   padding: 5%;
   display: flex;
