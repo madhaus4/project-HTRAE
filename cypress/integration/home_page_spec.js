@@ -20,4 +20,10 @@ describe('Home Page', () => {
       .get('a').last().should('have.text', 'climate.gov')
   })
 
+  it('Should not contain content not meant to be there', () => {
+    cy.get('.home-wrapper').should('not.exist')
+    cy.get('.img').should('not.exist')
+    cy.get('.home-page-container>.home-page-intro').should('not.contain', 'sup?!!')
+  })
+
 })
