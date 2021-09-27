@@ -57,4 +57,10 @@ describe('Nav Bar', () => {
       .should('include', '/Reminder')
   })
 
+  it('Should display the logo by default', () => {
+    cy.get('nav')
+      .get('.logo-in-nav')
+      .should('have.attr', 'alt')
+  })
+
 })
