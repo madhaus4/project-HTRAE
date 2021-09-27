@@ -15,9 +15,14 @@ describe('Home Page', () => {
 
   it('Should display a graph', () => {
     cy.get('.polar-page-container')
-      .get('.polar-data-graph')
-      
+      .get('.polar-data-graph')  
   })
 
+  it('Should not display an image', () => {
+    cy.contains('img').should('not.exist')
+  })
 
+  it('Should not display a button', () => {
+    cy.contains('button').should('not.exist')
+  })
 })
