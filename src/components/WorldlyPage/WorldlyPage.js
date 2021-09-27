@@ -4,11 +4,11 @@ import './WorldlyPage.css';
 const WorldlyPage = () => {
   console.log('otherWorldly: ', otherWorldly)
   const worldlyData = otherWorldly.map(elem => {
-    return <img src={elem.img} />
+    return <img className='worldly-image' src={elem.img} alt={elem.description}/>
   })
 
   return (
-    <section>
+    <section className='worldly-container'>
       {worldlyData}
     </section>
   )
