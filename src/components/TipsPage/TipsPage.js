@@ -23,7 +23,6 @@ const TipsPage = () => {
   }, []);
 
 
-  // FAVORITING AND UNFAVORITING
   const updateFavorite = (tip) => {
     const foundTip = favoriteTips.find(favorite => favorite.tip === tip.tip)
     !foundTip ? addFavoriteTip(tip) : removeFavoriteTip(foundTip)
@@ -56,13 +55,11 @@ const TipsPage = () => {
   }
 
 
-  // TOGGLE DISPLAY
   const toggleFavoritesDisplay = () => {
     setIsFavoritesDisplayed(!isFavoritesDisplayed)
   }
 
 
-  // LOCAL STORAGE
   const addToStorage = (tip) => {
     localStorage.setItem(tip.id, JSON.stringify(tip))
   }
@@ -85,7 +82,6 @@ const TipsPage = () => {
         <h2>It's time for action!  What are you willing to do to save the planet...</h2>
         <p>Here are some helpful sustainable tips to incorporate into your daily life!</p>
       </div>  
-
       <section className='tips-page-container'>
         <div className='tips-btn-container'>
           {!isFavoritesDisplayed  && 
@@ -99,8 +95,7 @@ const TipsPage = () => {
             onClick={() => toggleFavoritesDisplay()}
             >{!isFavoritesDisplayed ? 'View saved tips' : 'View more tips' }
           </button>
-        </div>  
-
+        </div>
         <div className='tip-container'>
         {!isFavoritesDisplayed && 
           <div>
