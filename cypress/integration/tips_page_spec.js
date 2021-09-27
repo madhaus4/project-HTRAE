@@ -35,7 +35,7 @@ describe('Home Page', () => {
       .find('img').click({ multiple: true })
   })
 
-  it('Should be able to click view saved tips button to see saved tips', () => {
+  it('Should be able to click view saved tips button to display saved tips', () => {
     //these first six commands are to add some tips into the saved tips to view
     cy.get('.tip-container>div>img').click({ multiple: true })
     cy.get('.tips-page-container>.tips-btn-container>.tip-btn')
@@ -54,4 +54,23 @@ describe('Home Page', () => {
       .contains('View saved tips').click()
   })
 
+  it('Should be able to click on the bookmark next to a tip in the saved view to delete it', () => {
+    //these first seven commands are to add some tips into the saved tips to view
+    cy.get('.tip-container>div>img').click({ multiple: true })
+    cy.get('.tips-page-container>.tips-btn-container>.tip-btn')
+      .contains('Another Tip').click()
+    cy.get('.tip-container>div>img').click({ multiple: true })
+    cy.get('.tips-page-container>.tips-btn-container>.tip-btn')
+      .contains('Another Tip').click()
+    cy.get('.tip-container>div>img').click({ multiple: true })
+    cy.get('.tips-page-container>.tips-btn-container>.tip-btn')
+      .contains('Another Tip').click()
+    cy.get('.tips-page-container>.tips-btn-container>.tip-btn')
+      .contains('View saved tips').click()
+
+    cy.get('article')
+      .get('.saved-tips')
+      .get('img').last()
+      .click()
+  })
 })
