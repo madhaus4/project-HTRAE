@@ -14,6 +14,7 @@ const HomePage = () => {
       <p>For more information: </p>
       <a href='https://www.un.org/en/climatechange'>UN on climate change</a>   
       <a href='https://explore.panda.org/climate'>WWF on climate crisis</a>
+      <a href='https://www.climate.gov/news-features/department/12/all'>climate.gov</a>
     </div>
     </section>
   )
