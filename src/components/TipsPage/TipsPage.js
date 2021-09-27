@@ -76,7 +76,7 @@ const TipsPage = () => {
     <>
       <div className='tips-page-intro'>
         <h2>It's time for action!  What are you willing to do to save the planet...</h2>
-        <p>Some tips for you to try out</p>
+        <p>Here are some helpful sustainable tips to incorporate into your daily life!</p>
       </div>  
       <section className='tips-page-container'>
 
