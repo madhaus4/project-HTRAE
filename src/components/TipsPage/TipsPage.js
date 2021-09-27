@@ -13,7 +13,7 @@ const TipsPage = () => {
   const [currentTip, setCurrentTip] = useState({})
   const [favoriteTips, setFavoriteTips] = useState([])
   const [isFavoritesDisplayed, setIsFavoritesDisplayed] = useState(false)
-  // const [isSaved, setIsSaved] = useState(false)
+  const [isSaved, setIsSaved] = useState(false)
 
   const getRandomTip = () => {
     const randomTipIndex = Math.floor(Math.random() * livingTips.length);
@@ -32,8 +32,18 @@ const TipsPage = () => {
   const updateFavorite = (tip) => {
     const foundTip = favoriteTips.find(favorite => favorite.tip === tip.tip)
 
+    handleFavorite(tip)
     !foundTip ? addFavoriteTip(tip) : removeFavoriteTip(foundTip)
     // setIsSaved(!isSaved)
+  }
+
+  const handleFavorite = (tip) => {
+    const filterLivingTips = livingTips.find(favorite => favorite.id === tip.id)
+    console.log('filterLivingTips: ', filterLivingTips)
+
+    if (filterLivingTips) {
+      filterLivingTips.isSaved = !filterLivingTips.isSaved
+    }
   }
 
   const addFavoriteTip = (tip) => {
@@ -41,16 +51,16 @@ const TipsPage = () => {
       isSaved: true,
       ...tip
     }
-
+    // setIsSaved(true)
     setFavoriteTips([...favoriteTips, newFavorite])
     addToStorage(newFavorite)
   }
 
   const removeFavoriteTip = (tip) => {
-    const filterFavoriteTips = favoriteTips.filter(favorite => favorite !== tip)
+    let filterFavoriteTips = favoriteTips.filter(favorite => favorite.tip !== tip.tip)
     // setIsSaved(false)
-    setFavoriteTips(filterFavoriteTips)
     removeFromStorage(tip)
+    setFavoriteTips(filterFavoriteTips)
   }
 
 
