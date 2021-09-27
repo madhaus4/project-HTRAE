@@ -7,7 +7,15 @@
 }
 
 .CO2-page-container > h2 {
+  width: 85%;
+  padding: 1%;
   font-size: 1em;
+  text-align: center;
+}
+
+.CO2-page-container > p {
+  margin: 0;
+  padding: 0 1% 1%;
 }
 
 .CO2-data-graph {
