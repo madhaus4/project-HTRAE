@@ -113,7 +113,8 @@ const TipsPage = () => {
             <h2>{currentTip.tip}</h2>
           </div>
         }
-        {isFavoritesDisplayed && <DisplayTips favoriteTips={favoriteTips} updateFavorite={updateFavorite} />}
+        {isFavoritesDisplayed && favoriteTips.length > 0 && <DisplayTips favoriteTips={favoriteTips} updateFavorite={updateFavorite} />}
+        {isFavoritesDisplayed && favoriteTips.length === 0 && <h3>You current have no favorited sustainable tips</h3>}
         </div>
       </section>
     </>
