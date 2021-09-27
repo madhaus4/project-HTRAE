@@ -22,7 +22,6 @@ const TempPage = () => {
 
   return (
     <section className='temp-page-container'>
-      {/* {console.log('temperatureData: ', temperatureData)} */}
       <h2>Our activities are impacting the global temperature.  This rise has been happening since the industrial revolution.  The average global temperature on Earth has increased by a little more than 1° Celsius (2° Fahrenheit) since 1880.  A one-degree global change is significant because it takes a vast amount of heat to warm all the oceans, atmosphere, and land by that much.</h2>
       <div className='temp-data-graph'>
         <TempGraph temperatureData={temperatureData} />
