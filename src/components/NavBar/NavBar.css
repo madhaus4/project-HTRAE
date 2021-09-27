@@ -1,11 +1,14 @@
+/* NAV BAR - PAGE HEADER  */
 nav {
-  width: 80%;
   height: 15vh;
+  width: 80%;
   margin: auto;
   display: flex;
   justify-content: space-between;
 }
 
+
+/* BTN CONTAINER */
 .btn-container {
   width: 65%;
   display: flex;
@@ -13,12 +16,13 @@ nav {
   justify-content: space-between;
 }
 
+/* SINGLE BTN */
 .btn-in-nav {
-  background: transparent;
-  border: none;
-  color: #06762B;
   font-size: 1em;
   font-weight: 500;
+  color: #06762B;
+  background: transparent;
+  border: none;
 }
 
 .btn-in-nav:hover {
@@ -28,9 +32,10 @@ nav {
   border-bottom: 1px solid #06762B;
 }
 
+/* LOGO */
 .logo-in-nav {
-  width: auto;
   height: 22vh;
+  width: auto;
   margin: 4vh;
   z-index: 10;
 }
