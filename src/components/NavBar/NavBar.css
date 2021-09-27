@@ -7,8 +7,10 @@ nav {
 }
 
 .btn-container {
+  width: 65%;
   display: flex;
   align-items: flex-end;
+  justify-content: space-between;
 }
 
 .btn-in-nav {
