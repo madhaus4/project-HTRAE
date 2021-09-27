@@ -30,9 +30,9 @@ const NavBar = () => {
           >Polar Ice Melt
         </button></Link>
 
-        <Link to='/Living-Tips'><button 
+        <Link to='/Sustainable-Life-Tips'><button 
           className='btn-in-nav'
-          >Living Tips
+          >Sustainable Tips
         </button></Link>
       
       </div>
