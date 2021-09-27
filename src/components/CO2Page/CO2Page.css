@@ -1,3 +1,4 @@
+/* CARBON DIOXIDE PAGE */
 .CO2-page-container {
   height: 100%;
   display: flex;
@@ -14,8 +15,8 @@
 }
 
 .CO2-page-container > p {
-  margin: 0;
   padding: 0 1% 1%;
+  margin: 0;
 }
 
 .CO2-data-graph {
