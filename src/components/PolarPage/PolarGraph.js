@@ -20,8 +20,8 @@ const PolarGraph = ({ polarData }) => {
 
   return (  
     <XYPlot
-    width={600}
-    height={300}
+    width={700}
+    height={250}
     yDomain={[3, 8]}
     >
       <HorizontalGridLines />
