@@ -8,9 +8,9 @@ const CO2Graph = ({ CO2Data }) => {
 
   return (
     <XYPlot
-    width={700}
-    height={250}
-    yDomain={[385, 420]}
+      width={700}
+      height={250}
+      yDomain={[385, 420]}
     >
       <HorizontalGridLines />
       <VerticalGridLines />
@@ -29,38 +29,4 @@ const CO2Graph = ({ CO2Data }) => {
 };
 
 
-// const CO2Graph = ({ CO2Data }) => {
-//   let mappedData = CO2Data.map(elem => {
-//     return (
-//       <article>
-//         <h2>{`date: ${elem.month}-${elem.year}`}</h2>
-//         <h2>{`cycle: ${elem.cycle}`}</h2>
-//         <h2>{`trend: ${elem.trend}`}</h2>
-//       </article>
-//     )
-//   })
-//   return mappedData
-// }
-
-
 export default CO2Graph;
-
-
-
-
-{/* <XYPlot width={600} height={300}>
-      <VerticalGridLines />
-      <HorizontalGridLines />
-      <XAxis title='YEAR' />
-      <YAxis title='CYCLE' />
-      <AreaSeries
-        // className="area-series-example"
-        color="#06762bb0"
-        curve="curveNatural"
-        data={CO2Data.map(elem => ({
-          ...elem,
-          x: elem.year,
-          y: elem.cycle
-        }))}
-      />
-    </XYPlot> */}
