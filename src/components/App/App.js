@@ -5,6 +5,7 @@ import CO2Page from '../CO2Page/CO2Page';
 import TempPage from '../TempPage/TempPage';
 import PolarPage from '../PolarPage/PolarPage';
 import TipsPage from '../TipsPage/TipsPage';
+import WorldlyPage from '../WorldlyPage/WorldlyPage';
 import NotFound from '../NotFound/NotFound';
 import './App.css';
 
@@ -28,6 +29,9 @@ const App = () => {
         />
         <Route exact path='/Sustainable-Life-Tips'
           render={() => <TipsPage />}
+        />
+        <Route exact path='/Reminder'
+          render={() => <WorldlyPage />}
         />
         <Route render={() => <NotFound />} />
        </Switch>
