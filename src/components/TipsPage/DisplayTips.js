@@ -1,6 +1,4 @@
-import arrowFill from '../../arrow-fill.png';
 import saved from '../../bookmark-fill.png';
-import unsaved from '../../bookmark-empty.png';
 import './TipsPage.css';
 
 const DisplayTips = ({ favoriteTips, updateFavorite }) => {
@@ -15,7 +13,6 @@ const DisplayTips = ({ favoriteTips, updateFavorite }) => {
           />
           <p key={favorite.id}>{favorite.tip}</p>
         </div>
-        {/* <h4>X</h4> */}
       </article>
     )
   })
