@@ -1,7 +1,66 @@
-/* main {
+/* HOME PAGE */
+.home-page-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+/* INTRO CONTAINER */
+.home-page-intro {
   width: 80%;
-  height: 70vh;
-  margin: 3vh auto;
-  border: 5px solid #94C5D8;
-  background-color: #ffffffb5;
-} */
+  height: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.home-page-intro > h2 {
+  text-align: center;
+}
+
+.welcome-statement {
+  width: 100%;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
+
+.welcome-statement > h3 {
+  font-size: 1.5em;
+  padding-right: 1%;
+  color: #06762B;
+}
+
+.climate-statement > h4{
+  font-size: 1.25em;
+  margin: 0;
+}
+
+.climate-statement > p {
+  padding: 1% 0;
+  margin: 0;
+}
+
+
+/* RESOURCE CONTAINER */
+.resource-container {
+  width: 99%;
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-end;
+}
+
+.resource-container > a {
+  margin: 0 1%;
+  text-decoration: none;
+  color: #B8466F;
+}
+
+.resource-container > a:hover {
+  cursor: pointer;
+  border-bottom: 1px solid #B8466F;
+}
