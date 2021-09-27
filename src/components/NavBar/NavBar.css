@@ -21,6 +21,13 @@ nav {
   font-weight: 500;
 }
 
+.btn-in-nav:hover {
+  cursor: pointer;
+  text-transform: uppercase;
+  border-top: 1px solid #06762B;
+  border-bottom: 1px solid #06762B;
+}
+
 .logo-in-nav {
   width: auto;
   height: 22vh;
