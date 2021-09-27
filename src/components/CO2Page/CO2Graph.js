@@ -15,7 +15,7 @@ const CO2Graph = ({ CO2Data }) => {
       <HorizontalGridLines />
       <VerticalGridLines />
       <LineSeries
-        color="#B8466F"
+        color='#B8466F'
         data={CO2Data.map(elem => ({
           ...elem,
           x: elem.year,
