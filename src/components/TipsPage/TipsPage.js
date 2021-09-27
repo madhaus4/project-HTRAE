@@ -85,8 +85,8 @@ const TipsPage = () => {
         <h2>It's time for action!  What are you willing to do to save the planet...</h2>
         <p>Here are some helpful sustainable tips to incorporate into your daily life!</p>
       </div>  
-      <section className='tips-page-container'>
 
+      <section className='tips-page-container'>
         <div className='tips-btn-container'>
           {!isFavoritesDisplayed  && 
           <button 
@@ -94,23 +94,23 @@ const TipsPage = () => {
             onClick={() => getRandomTip()} 
             >Another Tip
           </button>}
-
           <button
             className='tip-btn'
             onClick={() => toggleFavoritesDisplay()}
             >{!isFavoritesDisplayed ? 'View saved tips' : 'View more tips' }
           </button>
         </div>  
+
         <div className='tip-container'>
         {!isFavoritesDisplayed && 
           <div>
-            <h2>{currentTip.tip}</h2>
             <img 
-              className='saved-icon' 
+              className='bookmark-icon' 
               onClick={() => updateFavorite(currentTip)}
               src={!currentTip.isSaved ? unsaved : saved} 
               alt='bookmark icon for when item is not saved, black border with no fill' 
             />
+            <h2>{currentTip.tip}</h2>
           </div>
         }
         {isFavoritesDisplayed && <DisplayTips favoriteTips={favoriteTips} updateFavorite={updateFavorite} />}
