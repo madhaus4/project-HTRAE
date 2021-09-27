@@ -13,7 +13,7 @@ const TipsPage = () => {
   const [currentTip, setCurrentTip] = useState({})
   const [favoriteTips, setFavoriteTips] = useState([])
   const [isFavoritesDisplayed, setIsFavoritesDisplayed] = useState(false)
-  const [isSaved, setIsSaved] = useState(false)
+  // const [isSaved, setIsSaved] = useState(false)
 
   const getRandomTip = () => {
     const randomTipIndex = Math.floor(Math.random() * livingTips.length);
@@ -31,19 +31,24 @@ const TipsPage = () => {
   // FAVORITING AND UNFAVORITING
   const updateFavorite = (tip) => {
     const foundTip = favoriteTips.find(favorite => favorite.tip === tip.tip)
-    !foundTip ? addFavoriteTip(tip) : removeFavoriteTip(foundTip)
 
+    !foundTip ? addFavoriteTip(tip) : removeFavoriteTip(foundTip)
+    // setIsSaved(!isSaved)
   }
 
   const addFavoriteTip = (tip) => {
-    setIsSaved(true)
-    setFavoriteTips([...favoriteTips, tip])
-    addToStorage(tip)
+    let newFavorite = {
+      isSaved: true,
+      ...tip
+    }
+
+    setFavoriteTips([...favoriteTips, newFavorite])
+    addToStorage(newFavorite)
   }
 
   const removeFavoriteTip = (tip) => {
     const filterFavoriteTips = favoriteTips.filter(favorite => favorite !== tip)
-    setIsSaved(false)
+    // setIsSaved(false)
     setFavoriteTips(filterFavoriteTips)
     removeFromStorage(tip)
   }
@@ -107,16 +112,25 @@ const TipsPage = () => {
         {!isFavoritesDisplayed && 
           <div>
             <h2>{currentTip.tip}</h2>
+
             <img 
               className='saved-icon' 
-              src={unsaved} 
-              alt='bookmark icon, black border with no fill when not saved, black fill when saved' 
               onClick={() => updateFavorite(currentTip)}
+              src={!currentTip.isSaved ? unsaved : saved} 
+              alt='bookmark icon for when item is not saved, black border with no fill' 
             />
+            
+            {/* {currentTip.isSaved && <img 
+              className='saved-icon' 
+              src={saved} 
+              alt='bookmark icon for when item is saved, black border with black fill' 
+              onClick={() => updateFavorite(currentTip)}
+            />} */}
+
           </div>
         }
 
-        {isFavoritesDisplayed && <DisplayTips favoriteTips={favoriteTips}/>}
+        {isFavoritesDisplayed && <DisplayTips favoriteTips={favoriteTips} updateFavorite={updateFavorite} />}
         </div>
       </section>
     </>
