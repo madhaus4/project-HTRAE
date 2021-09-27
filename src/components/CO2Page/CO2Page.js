@@ -23,10 +23,11 @@ const CO2Page = () => {
   return (
     <section className='CO2-page-container' >
       {console.log('CO2Data: ', CO2Data)}
-      <p>CO2 page</p>
+      <h2>Carbon dioxide (CO2) is a greenhouse gas that absorbs and radiates heat.  It has an immense effect on the planet causing the land and ocean temperature to warm.  The Increases in carbon dioxide are responsible for about two-thirds of the total energy imbalance that is causing Earth's temperature to rise.</h2>
       <div className='CO2-data-graph'>
         <CO2Graph CO2Data={CO2Data} />
       </div>
+      <p>This graph visualizes the change in CO2 levels over the last decade.  The difference of ~26 parts per million may not seem like a lot.  However, consider that in 1960 that number was around 316ppm.  Today we are at 416ppm and that number is steadily increasing. </p>
     </section>
   )
 }
