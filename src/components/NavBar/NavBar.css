@@ -23,4 +23,5 @@ nav {
   width: auto;
   height: 22vh;
   margin: 4vh;
+  z-index: 10;
 }
