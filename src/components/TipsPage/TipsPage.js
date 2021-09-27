@@ -3,6 +3,8 @@ import DisplayTips from './DisplayTips';
 import livingTips from '../../utils/livingTipsData';
 // import arrowEmpty from '../../arrow-empty.png';
 // import arrowFill from '../../arrow-fill.png';
+import saved from '../../bookmark-fill.png';
+import unsaved from '../../bookmark-empty.png';
 import savedIcon from '../../Saved.png';
 import './TipsPage.css';
 
@@ -14,10 +16,8 @@ const TipsPage = () => {
   const [isSaved, setIsSaved] = useState(false)
 
   const getRandomTip = () => {
-    setIsSaved(false)
     const randomTipIndex = Math.floor(Math.random() * livingTips.length);
     const randomTip = livingTips[randomTipIndex];
-    console.log('randomTip: ', randomTip)
     setCurrentTip(randomTip)
   }
 
@@ -32,6 +32,7 @@ const TipsPage = () => {
   const updateFavorite = (tip) => {
     const foundTip = favoriteTips.find(favorite => favorite.tip === tip.tip)
     !foundTip ? addFavoriteTip(tip) : removeFavoriteTip(foundTip)
+
   }
 
   const addFavoriteTip = (tip) => {
@@ -42,6 +43,7 @@ const TipsPage = () => {
 
   const removeFavoriteTip = (tip) => {
     const filterFavoriteTips = favoriteTips.filter(favorite => favorite !== tip)
+    setIsSaved(false)
     setFavoriteTips(filterFavoriteTips)
     removeFromStorage(tip)
   }
@@ -88,11 +90,11 @@ const TipsPage = () => {
             >Another Tip
           </button>}
 
-          {!isFavoritesDisplayed && <button 
+          {/* {!isFavoritesDisplayed && <button 
             className='tip-btn'
             onClick={() => updateFavorite(currentTip)}
             >Save Tip
-          </button>}
+          </button>} */}
 
           <button
             className='tip-btn'
@@ -103,16 +105,19 @@ const TipsPage = () => {
         
         <div className='tip-container'>
         {!isFavoritesDisplayed && 
-          <>
-          <h2>{currentTip.tip}</h2>
-          {isSaved && <img className='saved-icon' src={savedIcon} />}
-          </>
+          <div>
+            <h2>{currentTip.tip}</h2>
+            <img 
+              className='saved-icon' 
+              src={unsaved} 
+              alt='bookmark icon, black border with no fill when not saved, black fill when saved' 
+              onClick={() => updateFavorite(currentTip)}
+            />
+          </div>
         }
 
         {isFavoritesDisplayed && <DisplayTips favoriteTips={favoriteTips}/>}
         </div>
-
-        {console.log('currentTip: ', currentTip)}
       </section>
     </>
   )
