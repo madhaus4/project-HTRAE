@@ -72,3 +72,6 @@ const otherWorldly = [
     copyright: ''
   }
 ]
+
+
+export default otherWorldly;
