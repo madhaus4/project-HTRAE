@@ -1,3 +1,4 @@
+/* NOT FOUND PAGE */
 .not-found-container {
   height: 100%;
   display: flex;
@@ -5,6 +6,7 @@
   justify-content: space-between;
 }
 
+/* NOT FOUND CONTAINER */
 .not-found-container > div {
   width: 80%;
   padding: 5%;
@@ -14,6 +16,7 @@
 .not-found-container > div > p {
   font-size: 1.35em;
 }
+
 .not-found-container > div > p:hover {
   cursor: pointer;
 }
@@ -23,7 +26,6 @@
   color: #B8466F;
   font-weight: 700;
 }
-
 
 .not-found-logo {
   height: 75px;
