@@ -6,6 +6,10 @@
   align-items: stretch;
 }
 
+.temp-page-container > h2 {
+  font-size: 1em;
+}
+
 .temp-data-graph {
   margin: auto;
 }
