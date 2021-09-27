@@ -15,19 +15,19 @@ const NavBar = () => {
         
         <Link to='/Carbon-Dioxide-Levels'><button 
           className='btn-in-nav'
-          >Carbon Dioxide
+          >CO2
         </button></Link>
       
         
         <Link to='/Temperature'><button 
           className='btn-in-nav'
-          >Temperature
+          >Surface Temp
         </button></Link>
       
         
         <Link to='/Arctic-Ice-Melt'><button 
           className='btn-in-nav'
-          >Polar Ice Melt
+          >Glacial Melt
         </button></Link>
 
         <Link to='/Sustainable-Life-Tips'><button 
