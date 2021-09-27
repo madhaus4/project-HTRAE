@@ -10,6 +10,7 @@ describe('Nav Bar', () => {
       .click()
       .url()
       .should('include', '/')
+      .should('not.include', '}[)))({;&')
   })
 
   it('Should have a button for the CO2 page', () => {
@@ -19,6 +20,7 @@ describe('Nav Bar', () => {
       .click()
       .url()
       .should('include', '/Carbon-Dioxide-Levels')
+      .should('not.include', '}[)))({;&')
   })
 
   it('Should have a button for the Surface Temp page', () => {
@@ -28,6 +30,7 @@ describe('Nav Bar', () => {
       .click()
       .url()
       .should('include', '/Temperature')
+      .should('not.include', '}[)))({;&')
   })
 
   it('Should have a button for the Glacial Melt page', () => {
@@ -37,6 +40,7 @@ describe('Nav Bar', () => {
       .click()
       .url()
       .should('include', '/Arctic-Ice-Melt')
+      .should('not.include', '}[)))({;&')
   })
 
   it('Should have a button for the Sustainable Tips page', () => {
@@ -46,6 +50,7 @@ describe('Nav Bar', () => {
       .click()
       .url()
       .should('include', '/Sustainable-Life-Tips')
+      .should('not.include', '}[)))({;&')
   })
 
   it('Should have a button for the This Planet page', () => {
@@ -55,11 +60,28 @@ describe('Nav Bar', () => {
       .click()
       .url()
       .should('include', '/Reminder')
+      .should('not.include', '}[)))({;&')
   })
 
   it('Should display the logo by default', () => {
     cy.get('nav')
       .get('.logo-in-nav')
       .should('have.attr', 'alt')
+  })
+
+  it('Should not have an h1 tag', () => {
+    cy.get('nav')
+      .should('not.have', 'h1')
+  })
+
+  it('Should not contain random words', () => {
+    cy.get('nav')
+      .should('not.contain', '???')
+      .should('not.contain', 'meat')
+      .should('not.contain', 'lol')
+      .should('not.contain', 'shenanigans')
+      .should('not.contain', 'YOLO')
+      .should('not.contain', ':)')
+      .should('not.contain', 'cats')
   })
 })
