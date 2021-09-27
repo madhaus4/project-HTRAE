@@ -1,7 +1,22 @@
+/* SUSTAINABLE TIPS PAGE */
+/* INTRO TEXT */
 .tips-page-intro {
+  width: 87%;
   height: 20%;
+  margin: auto;
 }
 
+.tips-page-intro > h2 {
+  padding: 1% 0;
+  margin-bottom: 0;
+}
+
+.tips-page-intro > p {
+  margin: 0;
+}
+
+
+/* PAGE CONTAINER */
 .tips-page-container {
   height: 70%;
   width: 100%;
@@ -9,6 +24,8 @@
   justify-content: space-evenly;
 }
 
+
+/* BTN CONTAINER */
 .tips-btn-container {
   width: 15%;
   height: 65%;
@@ -30,6 +47,8 @@
   background-color: #94C5D8;
 }
 
+
+/* SUGGESTED TIP CONTAINER */
 .tip-container{
   width: 65%;
   /* height: 65%; */
@@ -42,7 +61,6 @@
 
 .tip-container > h2 {
   padding: 5%;
-  /* margin: auto; */
 }
 
 .saved-icon {
@@ -54,6 +72,9 @@
 }
 
 
+
+
+/* SAVED TIPS DISPLAY */
 .saved-tips-container {
   height: fit-content;
   padding: 1%;
@@ -72,6 +93,8 @@ article > h4 {
   margin: 0;
 }
 
+
+/* SINGLE SAVED TIP */
 .saved-tips {
   width: 94%;
   display: flex;
