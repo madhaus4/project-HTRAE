@@ -34,6 +34,11 @@ const NavBar = () => {
           className='btn-in-nav'
           >Sustainable Tips
         </button></Link>
+
+        <Link to='/Reminder'><button 
+          className='btn-in-nav'
+          >This Planet
+        </button></Link>
       
       </div>
       <img 
