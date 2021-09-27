@@ -46,6 +46,7 @@
   cursor: pointer;
   text-transform: uppercase;
   background-color: #94C5D8;
+  border-color: #067606;
 }
 
 
@@ -53,7 +54,7 @@
 .tip-container {
   height: fit-content;
   width: 65%;
-  border: 2px solid green;
+  border: 2px solid #067606;
 }
 
 .tip-container > div {
@@ -70,6 +71,10 @@
   height: 50px;
   width: 50px;
   padding-right: 1%;
+}
+
+.bookmark-icon:hover {
+  cursor: pointer;
 }
 
 
@@ -107,4 +112,8 @@ article > h4 {
   height: 25px;
   width: 25px;
   padding: 0 1% 0 .5%;
+}
+
+.bookmark-icon-smaller:hover {
+  cursor: pointer;
 }
