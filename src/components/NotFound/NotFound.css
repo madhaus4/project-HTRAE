@@ -1,0 +1,31 @@
+.not-found-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.not-found-container > div {
+  width: 80%;
+  padding: 5%;
+  margin: auto;
+}
+
+.not-found-container > div > p {
+  font-size: 1.35em;
+}
+.not-found-container > div > p:hover {
+  cursor: pointer;
+}
+
+.link-to-home {
+  text-decoration: none;
+  color: #B8466F;
+  font-weight: 700;
+}
+
+
+.not-found-logo {
+  height: 75px;
+  width: 75px;
+}
