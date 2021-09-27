@@ -14,4 +14,12 @@ describe('Home Page', () => {
     cy.get('.worldly-container')
       .get('img[src="https://themysteriousworld.com/wp-content/uploads/2013/11/mount-everest.webp"]')  
   })
+
+  it('Should not have type attribute', () => {
+    cy.get('.worldly-container').should('not.have.attr', 'type')
+  })
+
+  it('Should not have type attribute', () => {
+    cy.get('.worldly-container>worldly').should('not.exist')
+  })
 })
