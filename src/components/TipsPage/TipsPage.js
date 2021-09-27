@@ -28,17 +28,20 @@ const TipsPage = () => {
   // FAVORITING AND UNFAVORITING
   const updateFavorite = (tip) => {
     const foundTip = favoriteTips.find(favorite => favorite.tip === tip.tip)
+    console.log('foundTipinUpdateFavs: '. foundTip)
 
-    handleFavorite(tip)
+    // handleFavorite(tip)
     !foundTip ? addFavoriteTip(tip) : removeFavoriteTip(foundTip)
   }
 
   const handleFavorite = (tip) => {
-    const filterLivingTips = livingTips.find(favorite => favorite.id === tip.id)
-    console.log('filterLivingTips: ', filterLivingTips)
+    const findLivingTip = livingTips.find(favorite => favorite.id === tip.id)
+    console.log('findLivingTip: ', findLivingTip)
+    const findFavoriteTip = favoriteTips.find(favorite => favorite.id === tip.id)
+    console.log('findFavoriteTip: ', findFavoriteTip)
 
-    if (filterLivingTips) {
-      filterLivingTips.isSaved = !filterLivingTips.isSaved
+    if (findLivingTip || findFavoriteTip) {
+      findLivingTip.isSaved = !findLivingTip.isSaved
     }
   }
 
@@ -47,15 +50,18 @@ const TipsPage = () => {
       isSaved: true,
       ...tip
     }
-    // setIsSaved(true)
+    handleFavorite(newFavorite)
     setFavoriteTips([...favoriteTips, newFavorite])
     addToStorage(newFavorite)
+    console.log('newFavorite in addFavorite: ', newFavorite)
   }
 
   const removeFavoriteTip = (tip) => {
     let filterFavoriteTips = favoriteTips.filter(favorite => favorite.tip !== tip.tip)
+    handleFavorite(tip)
     removeFromStorage(tip)
     setFavoriteTips(filterFavoriteTips)
+    console.log('removeFavorite function: ', tip)
   }
 
 
