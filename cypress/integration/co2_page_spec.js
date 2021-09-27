@@ -1,6 +1,6 @@
 describe('Home Page', () => {
   beforeEach (() => {
-    // cy.intercept('GET', 'https://global-warming.org/api/co2-api', { fixture: 'carbon_dioxide'}).as('CO2Data')
+    cy.intercept('GET', 'https://global-warming.org/api/co2-api', { fixture: 'carbon_dioxide'}).as('CO2Data')
     cy.visit('http://localhost:3000/Carbon-Dioxide-Levels')
   })
 

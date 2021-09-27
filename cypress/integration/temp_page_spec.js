@@ -1,5 +1,6 @@
 describe('Home Page', () => {
   beforeEach (() => {
+    cy.intercept('GET', 'https://global-warming.org/api/temperature-api', { fixture: 'temperature'}).as('tempData')
     cy.visit('http://localhost:3000/Temperature')
   })
 
