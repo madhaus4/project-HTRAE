@@ -1,4 +1,3 @@
-// import {XYPlot, XAxis, YAxis, HorizontalGridLines, LineSeries} from 'react-vis';
 import {XYPlot, XAxis, YAxis, VerticalGridLines, HorizontalGridLines, LineSeries} from 'react-vis';
 import '../../../node_modules/react-vis/dist/style.css';
 import './PolarPage.css';
