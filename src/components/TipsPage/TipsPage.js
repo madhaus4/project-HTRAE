@@ -1,11 +1,8 @@
 import { useState, useEffect } from 'react';
 import DisplayTips from './DisplayTips';
 import livingTips from '../../utils/livingTipsData';
-// import arrowEmpty from '../../arrow-empty.png';
-// import arrowFill from '../../arrow-fill.png';
 import saved from '../../bookmark-fill.png';
 import unsaved from '../../bookmark-empty.png';
-import savedIcon from '../../Saved.png';
 import './TipsPage.css';
 
 
@@ -13,7 +10,7 @@ const TipsPage = () => {
   const [currentTip, setCurrentTip] = useState({})
   const [favoriteTips, setFavoriteTips] = useState([])
   const [isFavoritesDisplayed, setIsFavoritesDisplayed] = useState(false)
-  const [isSaved, setIsSaved] = useState(false)
+  // const [isSaved, setIsSaved] = useState(false)
 
   const getRandomTip = () => {
     const randomTipIndex = Math.floor(Math.random() * livingTips.length);
@@ -34,7 +31,6 @@ const TipsPage = () => {
 
     handleFavorite(tip)
     !foundTip ? addFavoriteTip(tip) : removeFavoriteTip(foundTip)
-    // setIsSaved(!isSaved)
   }
 
   const handleFavorite = (tip) => {
@@ -58,7 +54,6 @@ const TipsPage = () => {
 
   const removeFavoriteTip = (tip) => {
     let filterFavoriteTips = favoriteTips.filter(favorite => favorite.tip !== tip.tip)
-    // setIsSaved(false)
     removeFromStorage(tip)
     setFavoriteTips(filterFavoriteTips)
   }
@@ -105,12 +100,6 @@ const TipsPage = () => {
             >Another Tip
           </button>}
 
-          {/* {!isFavoritesDisplayed && <button 
-            className='tip-btn'
-            onClick={() => updateFavorite(currentTip)}
-            >Save Tip
-          </button>} */}
-
           <button
             className='tip-btn'
             onClick={() => toggleFavoritesDisplay()}
@@ -129,14 +118,6 @@ const TipsPage = () => {
               src={!currentTip.isSaved ? unsaved : saved} 
               alt='bookmark icon for when item is not saved, black border with no fill' 
             />
-            
-            {/* {currentTip.isSaved && <img 
-              className='saved-icon' 
-              src={saved} 
-              alt='bookmark icon for when item is saved, black border with black fill' 
-              onClick={() => updateFavorite(currentTip)}
-            />} */}
-
           </div>
         }
 
