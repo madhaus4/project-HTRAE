@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import {XYPlot, XAxis, YAxis, HorizontalGridLines, VerticalGridLines, LineSeries} from 'react-vis';
 import '../../../node_modules/react-vis/dist/style.css';
 import './CO2Page.css';
@@ -27,6 +28,10 @@ const CO2Graph = ({ CO2Data }) => {
     </XYPlot>
   )
 };
+
+CO2Graph.propTypes = {
+  CO2Data: PropTypes.array
+}
 
 
 export default CO2Graph;
