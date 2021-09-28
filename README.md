@@ -1,5 +1,5 @@
 <div align="center"><img src="https://user-images.githubusercontent.com/76507607/134969664-c36d3ad7-ac69-4d7f-be39-c7ad8ae9fcc0.png" height="150px" width="150px"/><h1>project•HTRAE</h1>
-<p>A global warming quick refrence for user's who would like to add sustainable efforts into daily routines.</p>
+<p>A global warming quick reference for user's who would like to add sustainable efforts into daily routines.</p>
 <a href="https://project-htrae.vercel.app/">View Deployed Site Here</a>
 </div>
 
@@ -43,6 +43,7 @@ JavaScript | CSS | HTML5 | Cypress/E2E | ReactRouter | React | React vis | propT
 
 [Return to top](#top)
 
+---
 ### Current Features
 - User has the ability to save and un-save lifestyle tips.
 - Saved tips persist on page reload for better UX.
@@ -64,7 +65,6 @@ JavaScript | CSS | HTML5 | Cypress/E2E | ReactRouter | React | React vis | propT
 [Return to top](#top)
 
 ---
-
 ### Learning Goals
 - Better understand working with async JS
 - Fine tune implementing a 'favoriting' feature in React
@@ -78,9 +78,12 @@ JavaScript | CSS | HTML5 | Cypress/E2E | ReactRouter | React | React vis | propT
 [Inspiration Board](https://www.notion.so/Inspirations-0dc9dea1d13944178d575fd2ae5ad349)
 
 ---
-
 ### Reflection
- 
+As my final project of the term, I'm proud of my accomplishments with this project.  It wasn't the easiest or least stressful that's for sure.  However, I feel like I've gone beyond my original goals for this project, including taking on more self teaching than I time budgeted for.  One aspect that used a lot of time was implementing a graph package.  I found one I really liked but, as it turned out, that library used typeScript which made using it in this project not an option.  I invested a lot of time learning and applying that package and when it didn't work out, I felt pretty defeated.  Thankfully, I found another graph library that got the job done.  With the deadline looming, I wasn't able to research it as much as I'd like since I still had to balance other project tasks.  
+
+All the while, the other huge hurtle for me during this project was changing the initial mvp.  Originally, it was focused on a user updating the graphs.  But, because of the hardship I felt with graphs at this point, I had to change the mvp.  I was stressed but also confident that I would figure it out and I did.  I must say too that I'm happier with this second mvp than the original.  I think it gives the user a more relaxing experience with this application. It all worked out! 
+
+In the end, I delivered on the MVP and gave the user a friendly, informative and easy to use application.  With additives like local storage, a 'fun' 404 page featuring an animation, and multiple pages that convey insightful information, I hope user's can see the enthusiasm that went into building this site and will enjoy using this application.
 <br>
 
 
@@ -96,7 +99,6 @@ JavaScript | CSS | HTML5 | Cypress/E2E | ReactRouter | React | React vis | propT
 
 
 ---
-
 [Return to top](#top)
 
 
