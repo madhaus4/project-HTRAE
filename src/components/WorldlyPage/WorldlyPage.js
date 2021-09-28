@@ -1,10 +1,10 @@
+import PropTypes from 'prop-types';
 import otherWorldly from '../../utils/beautifulWorldData';
 import './WorldlyPage.css';
 
 const WorldlyPage = () => {
-  console.log('otherWorldly: ', otherWorldly)
   const worldlyData = otherWorldly.map(elem => {
-    return <img className='worldly-image' src={elem.img} alt={elem.description}/>
+    return <img key={elem.id} className='worldly-image' src={elem.img} alt={elem.description}/>
   })
 
   return (
@@ -14,5 +14,8 @@ const WorldlyPage = () => {
   )
 }
 
+WorldlyPage.propTypes = {
+  otherWorldly: PropTypes.array
+}
 
 export default WorldlyPage;
