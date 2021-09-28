@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import {getData} from '../../utils/apiCalls';
+import PropTypes from 'prop-types';
 import TempGraph from './TempGraph';
 import './TempPage.css';
 
@@ -30,6 +31,11 @@ const TempPage = () => {
       <p>Fun Fact: The 10 warmest years on record have all occurred since 2005, and 7 of the 10 have occurred just since 2014. </p>
     </section>
   )
+}
+
+TempPage.propTypes = {
+  temperatureData: PropTypes.array,
+  errorMsg: PropTypes.string
 }
 
 
