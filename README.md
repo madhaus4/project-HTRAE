@@ -94,7 +94,7 @@ JavaScript | CSS | HTML5 | Cypress/E2E | ReactRouter | React | React vis | propT
 
 ---
 
-[Return to top](#project-htrae)
+[Return to top](#top)
 
 
 
