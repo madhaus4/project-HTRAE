@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import {XYPlot, XAxis, YAxis, HorizontalGridLines, VerticalGridLines, LineSeries} from 'react-vis';
 import '../../../node_modules/react-vis/dist/style.css';
 import './TempPage.css';
@@ -23,6 +24,10 @@ const TempGraph = ({ temperatureData }) => {
       <YAxis title='TEMPERATUE C' />
     </XYPlot>
   )
+}
+
+TempGraph.propTypes = {
+  temperatureData: PropTypes.array
 }
 
 
