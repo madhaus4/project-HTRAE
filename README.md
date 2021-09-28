@@ -60,6 +60,7 @@ JavaScript | CSS | HTML5 | Cypress/E2E | ReactRouter | React | React vis | propT
 ### Preview
 ![recording (8)](https://user-images.githubusercontent.com/76507607/135017537-fc6a08da-91c2-4880-9cd5-f84828118e75.gif)<br>
 ![recording (7)](https://user-images.githubusercontent.com/76507607/135017206-5b99173e-e950-4055-8b5f-de46148dfa32.gif)
+![recording (9)](https://user-images.githubusercontent.com/76507607/135019051-7ad5b623-f38e-417d-a227-c05169874a45.gif)
 
 
 
