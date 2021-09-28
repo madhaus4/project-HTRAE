@@ -9,13 +9,13 @@
 ---
 
 [Summary](#summary) |
-[Tech Used](#tech-used)
+[Tech Used](#tech-used) |
 [Getting Started](#getting-started) |
 [Current Features](#current-features) |
 [Future Features & Noteworthy Limitations](#future-features-&-noteworthy-limitations) |
 [Preview](#preview) |
 [Learning Goals](#learning-goals) |
-[Organizational Tools](#organizational-tools)
+[Organizational Tools](#organizational-tools) |
 [Reflection](#reflection) |
 [Contributor](#contributor) |
 [Organizational Tools](#organizational-tools)
