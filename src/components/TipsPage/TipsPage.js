@@ -120,7 +120,8 @@ const TipsPage = () => {
 TipsPage.propTypes = {
   currentTip: PropTypes.object,
   favoriteTips: PropTypes.array,
-  isFavoritesDisplayed: PropTypes.bool
+  isFavoritesDisplayed: PropTypes.bool,
+  livingTips: PropTypes.array
 }
 
 
