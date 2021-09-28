@@ -41,7 +41,7 @@ JavaScript | CSS | HTML5 | Cypress/E2E | ReactRouter | React | React vis | propT
 5. Paste this: ```http://localhost:3000/``` into your browser
 
 
-[Return to top](#project-htrae)
+[Return to top](#top)
 
 ### Current Features
 - User has the ability to save and un-save lifestyle tips.
@@ -61,12 +61,15 @@ JavaScript | CSS | HTML5 | Cypress/E2E | ReactRouter | React | React vis | propT
 
 
 
-[Return to top](#project-htrae)
+[Return to top](#top)
 
 ---
 
 ### Learning Goals
-- 
+- Better understand working with async JS
+- Fine tune implementing a 'favoriting' feature in React
+- Learn how to test E2E using Cypress
+- Practice Router functionality
 
 ### Organizational Tools
 [Project Spec](https://frontend.turing.edu/projects/module-3/showcase.html) •
@@ -81,7 +84,7 @@ JavaScript | CSS | HTML5 | Cypress/E2E | ReactRouter | React | React vis | propT
 <br>
 
 
-[Return to top](#project-htrae)
+[Return to top](#top)
 
 ---
 ### Contributor:
