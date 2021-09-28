@@ -17,8 +17,7 @@
 [Learning Goals](#learning-goals) |
 [Organizational Tools](#organizational-tools) |
 [Reflection](#reflection) |
-[Contributor](#contributor) |
-[Organizational Tools](#organizational-tools)
+[Contributor](#contributor) 
  
 ---
 
