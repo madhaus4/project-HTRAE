@@ -22,7 +22,7 @@
 ---
 
 ### Summary
-For the fast paced user who is looking for a quick and reliable climate change refrence tool.  
+For the fast paced user who is looking for a quick and reliable climate change reference tool.  
 
 When a user visits the project•HTRAE website, they first land on the home page which gives a breif explaination of the mission.  From there, the navigation bar offers a few pages to sift through.  The first three pages: 'CO2', 'Surface Temp', and 'Glacial Melt' all have graphs to help visualize data and give context to the statements on each page.  When a user clicks on the 'Sustainable tips' button in the nav, the page they are brought to generates tips for the user to incorporate into their daily life.  The sustainable tips page can either be refreshed to display a new pointer or the user can click the 'Another Tip' button.  The user has the ability to save and un-save lifestyle tips of their choosing.  Additionally, viewing their saved recommendations is an option as well.  The last page to check out is 'This Planet' page that offers some beautiful landscape images as a 'why' reminder to the mission.
 
