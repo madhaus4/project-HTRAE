@@ -117,13 +117,11 @@ const TipsPage = () => {
   )
 }
 
-
 TipsPage.propTypes = {
   currentTip: PropTypes.object,
   favoriteTips: PropTypes.array,
   isFavoritesDisplayed: PropTypes.bool
 }
-
 
 
 export default TipsPage;
