@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import {XYPlot, XAxis, YAxis, VerticalGridLines, HorizontalGridLines, LineSeries} from 'react-vis';
 import '../../../node_modules/react-vis/dist/style.css';
 import './PolarPage.css';
@@ -25,6 +26,10 @@ const PolarGraph = ({ polarData }) => {
     </XYPlot>
   )
 };
+
+PolarGraph.propTypes = {
+  polarData: PropTypes.array
+}
 
 
 export default PolarGraph;
