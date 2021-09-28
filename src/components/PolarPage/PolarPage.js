@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import {getData} from '../../utils/apiCalls';
+import PropTypes from 'prop-types';
 import PolarGraph from './PolarGraph';
 import './PolarPage.css';
 
@@ -30,6 +31,11 @@ const PolarPage = () => {
       <p>This graph visualizes the loss of arctic sea ice coverage over the last 50-ish years.  From 2010 to present we are losing 12.85% of arctic ice coverage per decade.  Noteworthy: The degree of warming seen in the Arctic since 1980 is twice that in the rest of the world because of the albedo effect. </p>
     </section>
   )
+}
+
+PolarPage.propTypes = {
+  polarData: PropTypes.array,
+  errorMsg: PropTypes.string
 }
 
 
