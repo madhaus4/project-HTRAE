@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import {getData} from '../../utils/apiCalls';
+import PropTypes from 'prop-types';
 import CO2Graph from './CO2Graph';
 import './CO2Page.css';
 
@@ -29,6 +30,11 @@ const CO2Page = () => {
       <p>This graph visualizes the change in CO2 levels over the last decade.  The difference of ~26 parts per million may not seem like a lot.  However, consider that in 1960 that number was around 316ppm.  Today we are at 416ppm and that number is steadily increasing. </p>
     </section>
   )
+}
+
+CO2Page.propTypes = {
+  CO2Data: PropTypes.array,
+  errorMsg: PropTypes.string
 }
 
 
