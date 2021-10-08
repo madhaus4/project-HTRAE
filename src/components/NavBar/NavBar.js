@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Router, Link } from 'react-router-dom';
 import './NavBar.css';
 import logo from '../../logo.png';
 
@@ -6,7 +6,7 @@ const NavBar = () => {
   return (
     <nav>
       <div className='btn-container'>
-        
+        <Router>
         <Link to='/'><button 
           className='btn-in-nav'
           >Home
@@ -39,7 +39,7 @@ const NavBar = () => {
           className='btn-in-nav'
           >This Planet
         </button></Link>
-      
+      </Router>
       </div>
       <img 
         className='logo-in-nav'
