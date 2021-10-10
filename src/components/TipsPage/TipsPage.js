@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-// import PropTypes from 'prop-types';
 import DisplayTips from './DisplayTips';
 import livingTips from '../../utils/livingTipsData';
 import saved from '../../bookmark-fill.png';
@@ -116,13 +115,6 @@ const TipsPage = () => {
     </>
   )
 }
-
-// TipsPage.propTypes = {
-//   currentTip: PropTypes.object,
-//   favoriteTips: PropTypes.array,
-//   isFavoritesDisplayed: PropTypes.bool,
-//   livingTips: PropTypes.array
-// }
 
 
 export default TipsPage;

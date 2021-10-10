@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import {getData} from '../../utils/apiCalls';
-import PropTypes from 'prop-types';
 import PolarGraph from './PolarGraph';
 import './PolarPage.css';
 
@@ -32,11 +31,6 @@ const PolarPage = () => {
     </section>
   )
 }
-
-// PolarPage.propTypes = {
-//   polarData: PropTypes.array,
-//   errorMsg: PropTypes.string
-// }
 
 
 export default PolarPage;
