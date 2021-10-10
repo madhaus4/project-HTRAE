@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import {getData} from '../../utils/apiCalls';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import TempGraph from './TempGraph';
 import './TempPage.css';
 
@@ -33,10 +33,10 @@ const TempPage = () => {
   )
 }
 
-TempPage.propTypes = {
-  temperatureData: PropTypes.array,
-  errorMsg: PropTypes.string
-}
+// TempPage.propTypes = {
+//   temperatureData: PropTypes.array,
+//   errorMsg: PropTypes.string
+// }
 
 
 export default TempPage;

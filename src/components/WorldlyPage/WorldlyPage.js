@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import otherWorldly from '../../utils/beautifulWorldData';
 import './WorldlyPage.css';
 
@@ -14,8 +14,8 @@ const WorldlyPage = () => {
   )
 }
 
-WorldlyPage.propTypes = {
-  otherWorldly: PropTypes.array
-}
+// WorldlyPage.propTypes = {
+//   otherWorldly: PropTypes.array
+// }
 
 export default WorldlyPage;

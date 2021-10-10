@@ -33,10 +33,10 @@ const PolarPage = () => {
   )
 }
 
-PolarPage.propTypes = {
-  polarData: PropTypes.array,
-  errorMsg: PropTypes.string
-}
+// PolarPage.propTypes = {
+//   polarData: PropTypes.array,
+//   errorMsg: PropTypes.string
+// }
 
 
 export default PolarPage;

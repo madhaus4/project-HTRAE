@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import {getData} from '../../utils/apiCalls';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import CO2Graph from './CO2Graph';
 import './CO2Page.css';
 
@@ -32,10 +32,10 @@ const CO2Page = () => {
   )
 }
 
-CO2Page.propTypes = {
-  CO2Data: PropTypes.array,
-  errorMsg: PropTypes.string
-}
+// CO2Page.propTypes = {
+//   CO2Data: PropTypes.array,
+//   errorMsg: PropTypes.string
+// }
 
 
 export default CO2Page;
