@@ -24,9 +24,9 @@ const App = () => {
         <Route exact path='/Temperature' 
           render={() => <TempPage />} 
         />
-        <Route exact path='/Arctic-Ice-Melt' 
+        {/* <Route exact path='/Arctic-Ice-Melt' 
           render={() => <PolarPage />} 
-        />
+        /> */}
         <Route exact path='/Sustainable-Life-Tips'
           render={() => <TipsPage />}
         />

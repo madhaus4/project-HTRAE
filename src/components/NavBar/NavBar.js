@@ -24,10 +24,10 @@ const NavBar = () => {
         </button></Link>
       
         
-        <Link to='/Arctic-Ice-Melt'><button 
+        {/* <Link to='/Arctic-Ice-Melt'><button 
           className='btn-in-nav'
           >Glacial Melt
-        </button></Link>
+        </button></Link> */}
 
         <Link to='/Sustainable-Life-Tips'><button 
           className='btn-in-nav'
