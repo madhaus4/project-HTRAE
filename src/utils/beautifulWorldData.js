@@ -14,10 +14,10 @@ const otherWorldly = [
     id: 2
   },  
   {
-    img: 'https://themysteriousworld.com/wp-content/uploads/2013/11/victoria-falls.webp',
-    description: 'Victoria waterfalls is the largest waterfalls in the world depending on height and width. It is located in the border of Zambia and Zimbabwe, also known as mosi-oa-tanya.. The waterfall is protected by mosi-oa-tanya and Victoria national parks.',
+    img: 'https://i.insider.com/5ab96dd44c667b8b268b4568?width=1300&format=jpeg&auto=webp',
+    description: 'The White Desert, Egypt',
     date: '',
-    copyright: '',
+    copyright: 'elena moiseeva/Shutterstock',
     id: 3
   },
   {
@@ -56,10 +56,10 @@ const otherWorldly = [
     id: 8
   },
   {
-    img: 'https://scontent.fapa1-1.fna.fbcdn.net/v/t1.6435-9/81375682_174658483927885_2406635390455775232_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=730e14&_nc_ohc=gLncvCyW5D0AX_uu_e7&_nc_oc=AQl16WjXNp-mpq3Tug964dffM7mIPBliBUjGXFNRursQy_WqQcXVSiH5rl1OqIYFwIZemMu-0Zhf4B0_yAoYmxeb&_nc_ht=scontent.fapa1-1.fna&oh=81730618566cd12be498de4a4abc4601&oe=61760135',
-    description: '',
+    img: 'https://i.insider.com/5ab96c0d4c667b55008b45a6?width=1300&format=jpeg&auto=webp',
+    description: 'Joshua Tree National Park in the Mojave Desert',
     date: '',
-    copyright: '',
+    copyright: 'S.Borisov/Shutterstock',
     id: 9
   },
   {
@@ -70,15 +70,15 @@ const otherWorldly = [
     id: 10
   },
   {
-    img: 'https://scontent.fapa1-1.fna.fbcdn.net/v/t1.6435-9/70625335_105971367463264_8872828162048786432_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=EmiRlZ5-NyEAX8YRXBB&tn=nt1RDwyC8c5SK0U3&_nc_ht=scontent.fapa1-1.fna&oh=da51ba7edcc444e1c205aadcab935829&oe=6178B57B',
-    description: '',
+    img: 'https://themysteriousworld.com/wp-content/uploads/2013/11/mount-everest.webp',
+    description: 'Mount Everest is the highest spot on Earth with height of 8848 m, located between the borders of Tibet and Nepal in Himalayan mountains. It is named after George Everest , surveyor general of Britain.',
     date: '',
     copyright: '',
     id: 11
   },
   {
-    img: 'https://themysteriousworld.com/wp-content/uploads/2013/11/mount-everest.webp',
-    description: 'Mount Everest is the highest spot on Earth with height of 8848 m, located between the borders of Tibet and Nepal in Himalayan mountains. It is named after George Everest , surveyor general of Britain.',
+    img: 'https://themysteriousworld.com/wp-content/uploads/2013/11/victoria-falls.webp',
+    description: 'Victoria waterfalls is the largest waterfalls in the world depending on height and width. It is located in the border of Zambia and Zimbabwe, also known as mosi-oa-tanya.. The waterfall is protected by mosi-oa-tanya and Victoria national parks.',
     date: '',
     copyright: '',
     id: 12
